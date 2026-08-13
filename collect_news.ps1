@@ -67,6 +67,16 @@ $MediaContextWords = @(
 )
 $PriorityKeywords = @('대가산정안','대가산정','채널평가','채널퇴출','프로그램사용료')
 
+# PP(방송채널사용사업자 - 지상파/종편/PP 등 채널·콘텐츠 공급사) 전용 탭 판정 키워드.
+# SO/IPTV 플랫폼사와는 다른 축(채널을 만드는 쪽)이라 별도로 분리한다.
+$PPKeywords = @(
+    'MBC','KBS','SBS','JTBC','tvN','채널A','TV조선','MBN','CJ ENM',
+    '방송채널사용사업자','채널평가','채널퇴출','프로그램사용료','MPP',
+    'PP협의회','콘텐츠 사용료','대가산정','중복편성',
+    # 사용자 요청으로 추가: 신규 콘텐츠·프로그램 제작 소식
+    '편성표','제작발표회','신작 드라마','신작 예능','오리지널 콘텐츠','시즌2 제작','첫방송','편성 확정'
+)
+
 # "처음에 얘기했던 유료방송업계" 판정 - 핵심 키워드 목록에만 근거(확장 범위는 포함하지 않음)
 function Test-CoreTopicMatch($text) {
     if ([string]::IsNullOrWhiteSpace($text)) { return $false }
@@ -74,6 +84,14 @@ function Test-CoreTopicMatch($text) {
         if ($text.Contains($kw)) { return $true }
     }
     if ($text -match '(?<![A-Za-z0-9])SO(?![A-Za-z0-9])') { return $true }
+    return $false
+}
+
+function Test-PPMatch($text) {
+    if ([string]::IsNullOrWhiteSpace($text)) { return $false }
+    foreach ($kw in $PPKeywords) {
+        if ($text.Contains($kw)) { return $true }
+    }
     return $false
 }
 
@@ -292,6 +310,7 @@ function Add-NewsItem($title, $link, $source, $pubDate, $displayTime) {
         DisplayTime = $displayTime
         Priority    = (Test-PriorityMatch $title)
         IsCore      = (Test-CoreTopicMatch $title)
+        IsPP        = (Test-PPMatch $title)
     })
 }
 
@@ -321,8 +340,9 @@ function Load-History {
                 PubDate     = $pd
                 DisplayTime = $r.DisplayTime
                 Priority    = [bool]$r.Priority
-                # 저장 이후 키워드 목록이 바뀌었을 수 있으니 핵심 여부는 매번 다시 판정한다
+                # 저장 이후 키워드 목록이 바뀌었을 수 있으니 핵심/PP 여부는 매번 다시 판정한다
                 IsCore      = (Test-CoreTopicMatch $r.Title)
+                IsPP        = (Test-PPMatch $r.Title)
             })
         }
     } catch {
@@ -391,7 +411,10 @@ $NaverQueries = @(
     '웨이브 티빙', '왓챠 디즈니플러스', '쿠팡플레이', '망사용료', '합산규제', '인수합병 M&A',
     '외주제작', 'K콘텐츠', '방송광고', '홈쇼핑', '유튜브 크리에이터',
     # 사용자 요청으로 추가: 국내 유료방송사·채널사
-    'KT', 'SK브로드밴드', 'LG유플러스 방송', 'MBC', 'KBS', 'SBS', 'JTBC'
+    'KT', 'SK브로드밴드', 'LG유플러스 방송', 'MBC', 'KBS', 'SBS', 'JTBC',
+    # PP(방송채널사용사업자) 탭 전용 검색어
+    'PP협의회', 'MPP 채널', '콘텐츠 사용료 협상', '중복편성', 'tvN', 'CJ ENM 채널',
+    '드라마 제작발표', '예능 신작', '오리지널 콘텐츠 제작', '편성 확정'
 )
 
 foreach ($q in $NaverQueries) {
@@ -531,24 +554,28 @@ foreach ($it in $sorted) {
 # 화면에는 최대 10페이지(페이지당 10건)까지, 히스토리 파일에는 그보다 넉넉하게 보관해서
 # 당장 화면에 없는 기사도 다음 실행에 다시 후보로 살아있게 한다.
 $MaxDisplayItems = 100
-$MaxStoredHistoryCore     = 200
-$MaxStoredHistoryExtended = 300
+$MaxStoredHistoryCore = 200
+$MaxStoredHistoryPP   = 200
+$MaxStoredHistoryRest = 300
 
 # PowerShell은 결과가 1건뿐이면 배열이 아닌 단일 객체를 반환해 .Count가 비어버리므로 @()로 강제 배열화
 $final = @($capped | Select-Object -First $MaxDisplayItems)
+# 핵심/PP 탭은 서로 겹칠 수 있다(예: '채널퇴출' 기사는 핵심 유료방송이자 PP 뉴스이기도 함) - 화면 표시는 겹쳐도 자연스러움
 $coreFinal = @($capped | Where-Object { $_.IsCore } | Select-Object -First $MaxDisplayItems)
+$ppFinal   = @($capped | Where-Object { $_.IsPP } | Select-Object -First $MaxDisplayItems)
 
-# 핵심 유료방송 뉴스는 건수가 적어서, '미디어·콘텐츠 전체' 쪽 물량이 많아도
-# 저장 공간을 따로 확보해줘야 7일을 다 채우기 전에 밀려나지 않는다(둘을 한 예산으로 합치면
-# 물량 많은 확장 카테고리가 핵심 뉴스 자리를 잠식할 수 있음).
-$storedCore     = @($capped | Where-Object { $_.IsCore } | Select-Object -First $MaxStoredHistoryCore)
-$storedExtended = @($capped | Where-Object { -not $_.IsCore } | Select-Object -First $MaxStoredHistoryExtended)
-$storedList = @($storedCore + $storedExtended)
+# 저장 공간은 세 카테고리(핵심/PP/그 외)를 서로 겹치지 않게 나눠서 예산을 확보한다.
+# 물량이 많은 카테고리가 저장공간을 다 차지해서 물량 적은 카테고리가 7일도 못 채우고
+# 밀려나는 걸 막기 위함(핵심 유료방송 문제로 이미 한 번 겪은 문제라 PP도 동일하게 분리).
+$storedCore = @($capped | Where-Object { $_.IsCore } | Select-Object -First $MaxStoredHistoryCore)
+$storedPP   = @($capped | Where-Object { $_.IsPP -and -not $_.IsCore } | Select-Object -First $MaxStoredHistoryPP)
+$storedRest = @($capped | Where-Object { -not $_.IsCore -and -not $_.IsPP } | Select-Object -First $MaxStoredHistoryRest)
+$storedList = @($storedCore + $storedPP + $storedRest)
 
 Save-History $storedList
 
-Write-Log ("최종 수집 {0}건(핵심 {1}건) (수집 총 {2}건 -> 중복제거 {3}건 -> 유사기사묶음 상한적용 전 {4}건 -> 적용 후 {5}건, 묶음 {6}개, 히스토리저장 {7}건)" `
-    -f $final.Count, $coreFinal.Count, $Items.Count, $deduped.Count, $sorted.Count, $capped.Count, $clusters.Count, $storedList.Count)
+Write-Log ("최종 수집 {0}건(핵심 {1}건, PP {2}건) (수집 총 {3}건 -> 중복제거 {4}건 -> 유사기사묶음 상한적용 전 {5}건 -> 적용 후 {6}건, 묶음 {7}개, 히스토리저장 {8}건)" `
+    -f $final.Count, $coreFinal.Count, $ppFinal.Count, $Items.Count, $deduped.Count, $sorted.Count, $capped.Count, $clusters.Count, $storedList.Count)
 
 # ------------------------------------------------------------------
 # 4) HTML 리포트 생성
@@ -582,6 +609,7 @@ function Build-RowsHtml($list, $emptyMsg) {
 }
 
 $coreRowsHtml = Build-RowsHtml $coreFinal "최근 7일 내 핵심 유료방송(IPTV/SO) 뉴스가 없습니다."
+$ppRowsHtml   = Build-RowsHtml $ppFinal "최근 7일 내 PP(방송채널사용사업자) 관련 뉴스가 없습니다."
 $allRowsHtml  = Build-RowsHtml $final "최근 7일 내 수집된 관련 뉴스가 없습니다."
 
 $KoCulture = [System.Globalization.CultureInfo]::GetCultureInfo("ko-KR")
@@ -613,7 +641,8 @@ $html = @"
     background: linear-gradient(135deg,#1e3a8a,#5b21b6);
     color: #fff; padding: 28px 20px 22px;
   }
-  header h1 { margin: 0 0 6px; font-size: 20px; }
+  header h1 { margin: 0 0 4px; font-size: 20px; }
+  header .credit { margin: 0 0 6px; font-size: 11.5px; opacity: 0.75; letter-spacing: 0.02em; }
   header .updated { font-size: 13px; opacity: 0.9; }
   .wrap { max-width: 720px; margin: 0 auto; padding: 16px; }
   .card {
@@ -663,8 +692,9 @@ $html = @"
   }
   .tabs { display: flex; gap: 8px; margin: 14px auto 0; max-width: 720px; padding: 0 16px; }
   .tab-btn {
-    flex: 1; padding: 10px 12px; border-radius: 10px 10px 0 0; border: 1px solid #e5e7eb; border-bottom: none;
-    background: #e9ebef; color: #555; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit;
+    flex: 1; padding: 9px 4px; border-radius: 10px 10px 0 0; border: 1px solid #e5e7eb; border-bottom: none;
+    background: #e9ebef; color: #555; font-size: 12.5px; font-weight: 600; cursor: pointer; font-family: inherit;
+    white-space: nowrap;
   }
   .tab-btn.active { background: #fff; color: #1a1a1a; }
   @media (prefers-color-scheme: dark) {
@@ -678,14 +708,18 @@ $html = @"
 <body>
 <header>
   <div class="headerRow">
-    <h1>📡 유료방송(IPTV/SO) 업계 뉴스</h1>
+    <div>
+      <h1>📡 유료방송(IPTV/SO) 업계 뉴스</h1>
+      <p class="credit">제작 · 운영: TCAST 매체영업팀</p>
+    </div>
     <button class="refresh-btn" id="refreshBtn" onclick="doRefresh()"><span class="icon">🔄</span> 새로고침</button>
   </div>
-  <div class="updated">마지막 업데이트: $updatedStr · 핵심 $($coreFinal.Count)건 · 전체 $($final.Count)건 · 최근 7일 누적</div>
+  <div class="updated">마지막 업데이트: $updatedStr · 핵심 $($coreFinal.Count)건 · PP $($ppFinal.Count)건 · 전체 $($final.Count)건 · 최근 7일 누적</div>
 </header>
 <div class="tabs">
   <button class="tab-btn active" id="tabBtnAll" onclick="showTab('all')">🆕 최신 뉴스</button>
   <button class="tab-btn" id="tabBtnCore" onclick="showTab('core')">📡 핵심 유료방송</button>
+  <button class="tab-btn" id="tabBtnPP" onclick="showTab('pp')">🎬 PP 소식</button>
 </div>
 <div class="wrap" style="margin-top:0; padding-top:0;">
   <div class="tab-section active" id="allSection">
@@ -712,7 +746,19 @@ $html = @"
       </div>
     </div>
   </div>
-  <footer>30분마다 자동 갱신(이 PC 기준) · 최근 7일간 누적 · 최대 10페이지까지 보관<br>🔥 핵심이슈 = 대가산정안/채널평가/채널퇴출/프로그램사용료 관련 기사 · 새로고침 버튼은 마지막으로 저장된 최신본을 다시 불러옵니다.</footer>
+  <div class="tab-section" id="ppSection">
+    <div class="card" style="margin-top:0;">
+      <ul id="ppList">
+        $ppRowsHtml
+      </ul>
+      <div class="pager" id="ppPager">
+        <button id="ppPrevBtn" onclick="gotoPage('pp', currentPage.pp - 1)">이전</button>
+        <span class="pageIndicator" id="ppPageIndicator"></span>
+        <button id="ppNextBtn" onclick="gotoPage('pp', currentPage.pp + 1)">다음</button>
+      </div>
+    </div>
+  </div>
+  <footer>30분마다 자동 갱신(GitHub Actions 클라우드에서 실행 · PC와 무관하게 항상 최신 상태) · 최근 7일간 누적 · 최대 10페이지까지 보관<br>🔥 핵심이슈 = 대가산정안/채널평가/채널퇴출/프로그램사용료 관련 기사 · 새로고침 버튼은 마지막으로 저장된 최신본을 다시 불러옵니다.</footer>
 </div>
 <script>
 function doRefresh() {
@@ -724,11 +770,13 @@ function doRefresh() {
 function showTab(name) {
   document.getElementById('coreSection').classList.toggle('active', name === 'core');
   document.getElementById('allSection').classList.toggle('active', name === 'all');
+  document.getElementById('ppSection').classList.toggle('active', name === 'pp');
   document.getElementById('tabBtnCore').classList.toggle('active', name === 'core');
   document.getElementById('tabBtnAll').classList.toggle('active', name === 'all');
+  document.getElementById('tabBtnPP').classList.toggle('active', name === 'pp');
 }
 
-var currentPage = { core: 1, all: 1 };
+var currentPage = { core: 1, all: 1, pp: 1 };
 
 function gotoPage(scope, p) {
   var rows = document.querySelectorAll('#' + scope + 'List li');
@@ -756,6 +804,7 @@ function gotoPage(scope, p) {
 
 gotoPage('core', 1);
 gotoPage('all', 1);
+gotoPage('pp', 1);
 </script>
 </body>
 </html>
