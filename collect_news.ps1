@@ -710,7 +710,7 @@ $html = @"
   <div class="headerRow">
     <div>
       <h1>📡 유료방송(IPTV/SO) 업계 뉴스</h1>
-      <p class="credit">제작 · 운영: TCAST 매체영업팀</p>
+      <p class="credit">페이지 만든이: TCAST 매체영업팀</p>
     </div>
     <button class="refresh-btn" id="refreshBtn" onclick="doRefresh()"><span class="icon">🔄</span> 새로고침</button>
   </div>
