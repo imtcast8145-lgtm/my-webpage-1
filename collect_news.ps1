@@ -274,7 +274,9 @@ function Resolve-NaverTime($rawLabel, $now) {
 # 결과 저장용 리스트
 # ------------------------------------------------------------------
 $Items = New-Object System.Collections.Generic.List[object]
-$Now = Get-Date
+# GitHub Actions 러너의 시스템 시각은 UTC라서, 한국 독자 기준 시각이 나오도록 고정 오프셋(UTC+9)으로 보정한다
+# (한국은 서머타임이 없어 항상 UTC+9로 고정해도 안전함)
+$Now = (Get-Date).ToUniversalTime().AddHours(9)
 
 function Add-NewsItem($title, $link, $source, $pubDate, $displayTime) {
     if ([string]::IsNullOrWhiteSpace($title) -or [string]::IsNullOrWhiteSpace($link)) { return }
@@ -582,7 +584,8 @@ function Build-RowsHtml($list, $emptyMsg) {
 $coreRowsHtml = Build-RowsHtml $coreFinal "최근 7일 내 핵심 유료방송(IPTV/SO) 뉴스가 없습니다."
 $allRowsHtml  = Build-RowsHtml $final "최근 7일 내 수집된 관련 뉴스가 없습니다."
 
-$updatedStr = $Now.ToString("yyyy-MM-dd (ddd) HH:mm")
+$KoCulture = [System.Globalization.CultureInfo]::GetCultureInfo("ko-KR")
+$updatedStr = $Now.ToString("yyyy-MM-dd (ddd) HH:mm", $KoCulture)
 
 $html = @"
 <!DOCTYPE html>
