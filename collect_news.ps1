@@ -621,7 +621,7 @@ $html = @"
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>유료방송(IPTV/SO) 업계 뉴스</title>
+<title>Tcast Media news clipping(IPTV/SO/PP)</title>
 <style>
   :root { color-scheme: light dark; }
   * { box-sizing: border-box; }
@@ -712,7 +712,7 @@ $html = @"
   <div class="headerRow">
     <div>
       <div class="titleRow">
-        <h1>📡 유료방송(IPTV/SO) 업계 뉴스</h1>
+        <h1>📡 Tcast Media news clipping(IPTV/SO/PP)</h1>
         <button class="refresh-btn" id="refreshBtn" onclick="doRefresh()" aria-label="새로고침" title="새로고침"><span class="icon">🔄</span></button>
       </div>
       <p class="credit">페이지 만든이: Tcast 매체영업팀</p>
