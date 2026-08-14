@@ -641,7 +641,7 @@ $html = @"
     background: linear-gradient(135deg,#ec1e79,#c2116b);
     color: #fff; padding: 28px 20px 22px;
   }
-  header h1 { margin: 0; font-size: 26px; font-weight: 800; letter-spacing: -0.01em; line-height: 1.15; }
+  header h1 { margin: 0 0 4px; font-size: 21px; font-weight: 800; letter-spacing: -0.01em; line-height: 1.25; }
   header .subtitle {
     margin: 3px 0 6px; font-size: 14.5px; font-weight: 600; opacity: 0.95;
     display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;
@@ -715,8 +715,7 @@ $html = @"
 <header>
   <div class="headerRow">
     <div>
-      <h1>📡 Tcast</h1>
-      <p class="subtitle">Media News Clipping <span class="tag">(IPTV/SO/PP)</span></p>
+      <h1>📡 Tcast Media news clipping</h1>
       <p class="credit">페이지 만든이: Tcast 매체영업팀</p>
     </div>
     <button class="refresh-btn" id="refreshBtn" onclick="doRefresh()" aria-label="새로고침" title="새로고침"><span class="icon">🔄</span></button>
