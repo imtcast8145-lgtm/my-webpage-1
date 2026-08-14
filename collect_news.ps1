@@ -663,12 +663,14 @@ $html = @"
   .dot { margin: 0 6px; }
   .empty { padding: 30px; text-align: center; color: #888; }
   footer { text-align: center; font-size: 12px; color: #999; padding: 18px; }
-  .headerRow { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .headerRow { display: flex; align-items: flex-start; gap: 8px; }
+  .titleRow { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
   .refresh-btn {
-    display: inline-flex; align-items: center; gap: 6px;
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 30px; height: 30px; flex: 0 0 auto; padding: 0;
     background: rgba(255,255,255,0.15); color: #fff; border: 1px solid rgba(255,255,255,0.4);
-    border-radius: 8px; padding: 7px 12px; font-size: 13px; cursor: pointer;
-    font-family: inherit; white-space: nowrap;
+    border-radius: 8px; font-size: 15px; cursor: pointer;
+    font-family: inherit; line-height: 1;
   }
   .refresh-btn:hover { background: rgba(255,255,255,0.28); }
   .refresh-btn:active { transform: scale(0.97); }
@@ -709,10 +711,12 @@ $html = @"
 <header>
   <div class="headerRow">
     <div>
-      <h1>📡 유료방송(IPTV/SO) 업계 뉴스</h1>
-      <p class="credit">페이지 만든이: TCAST 매체영업팀</p>
+      <div class="titleRow">
+        <h1>📡 유료방송(IPTV/SO) 업계 뉴스</h1>
+        <button class="refresh-btn" id="refreshBtn" onclick="doRefresh()" aria-label="새로고침" title="새로고침"><span class="icon">🔄</span></button>
+      </div>
+      <p class="credit">페이지 만든이: Tcast 매체영업팀</p>
     </div>
-    <button class="refresh-btn" id="refreshBtn" onclick="doRefresh()"><span class="icon">🔄</span> 새로고침</button>
   </div>
   <div class="updated">마지막 업데이트: $updatedStr · 핵심 $($coreFinal.Count)건 · PP $($ppFinal.Count)건 · 전체 $($final.Count)건 · 최근 7일 누적</div>
 </header>
