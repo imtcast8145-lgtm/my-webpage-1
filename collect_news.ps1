@@ -635,10 +635,10 @@ $html = @"
     .card { background: #1f2229 !important; border-color: #2c303a !important; }
     .row { border-bottom-color: #2a2d35 !important; }
     .meta { color: #9aa0aa !important; }
-    header { background: linear-gradient(135deg,#1b2a4a,#2b1b4a) !important; }
+    header { background: linear-gradient(135deg,#c2116b,#8e0e50) !important; }
   }
   header {
-    background: linear-gradient(135deg,#1e3a8a,#5b21b6);
+    background: linear-gradient(135deg,#ec1e79,#c2116b);
     color: #fff; padding: 28px 20px 22px;
   }
   header h1 { margin: 0 0 4px; font-size: 20px; }
