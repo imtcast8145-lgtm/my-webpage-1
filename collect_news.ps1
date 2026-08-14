@@ -65,12 +65,30 @@ $MediaContextWords = @(
     '방송','채널','미디어','콘텐츠','OTT','IPTV','유료방송','케이블','넷플릭스',
     'TV','셋톱박스','스카이라이프','시청률','드라마','예능','스트리밍','엔터테인먼트'
 )
-$PriorityKeywords = @(
-    '대가산정안','대가산정','채널평가','채널퇴출','프로그램사용료',
+# 핵심이슈 배지에 "무슨 이슈인지" 바로 보이도록 카테고리별로 매핑.
+# 위에서 아래 순서로 검사하며, 먼저 걸리는 카테고리를 사용한다.
+$PriorityCategoryMap = [ordered]@{
+    '대가산정안'     = '대가산정'
+    '대가산정'       = '대가산정'
+    '채널평가'       = '채널평가'
+    '채널퇴출'       = '채널퇴출'
+    '프로그램사용료' = '사용료'
     # 사용자 요청으로 추가: IPTV/SO/PP 등 매출·실적 관련 뉴스도 핵심이슈로 표시
     # (이 목록은 이미 업계 관련으로 필터링된 기사에만 적용되므로 노이즈 걱정 없이 넓게 잡아도 됨)
-    '매출','영업이익','영업익','실적'
-)
+    '매출'           = '실적'
+    '영업이익'       = '실적'
+    '영업익'         = '실적'
+    '실적'           = '실적'
+}
+$PriorityKeywords = @($PriorityCategoryMap.Keys)
+
+function Get-PriorityLabel($text) {
+    if ([string]::IsNullOrWhiteSpace($text)) { return $null }
+    foreach ($k in $PriorityCategoryMap.Keys) {
+        if ($text.Contains($k)) { return $PriorityCategoryMap[$k] }
+    }
+    return $null
+}
 
 # PP(방송채널사용사업자 - 지상파/종편/PP 등 채널·콘텐츠 공급사) 전용 탭 판정 키워드.
 # SO/IPTV 플랫폼사와는 다른 축(채널을 만드는 쪽)이라 별도로 분리한다.
@@ -307,15 +325,17 @@ function Add-NewsItem($title, $link, $source, $pubDate, $displayTime) {
     if ([string]::IsNullOrWhiteSpace($displayTime)) {
         $displayTime = if ($pubDate) { $pubDate.ToString("MM/dd HH:mm") } else { "시간 미상" }
     }
+    $prLabel = Get-PriorityLabel $title
     $Items.Add([PSCustomObject]@{
-        Title       = $title
-        Link        = $link.Trim()
-        Source      = $source
-        PubDate     = $pubDate
-        DisplayTime = $displayTime
-        Priority    = (Test-PriorityMatch $title)
-        IsCore      = (Test-CoreTopicMatch $title)
-        IsPP        = (Test-PPMatch $title)
+        Title         = $title
+        Link          = $link.Trim()
+        Source        = $source
+        PubDate       = $pubDate
+        DisplayTime   = $displayTime
+        Priority      = ($null -ne $prLabel)
+        PriorityLabel = $prLabel
+        IsCore        = (Test-CoreTopicMatch $title)
+        IsPP          = (Test-PPMatch $title)
     })
 }
 
@@ -344,8 +364,9 @@ function Load-History {
                 Source      = $r.Source
                 PubDate     = $pd
                 DisplayTime = $r.DisplayTime
-                Priority    = [bool]$r.Priority
-                # 저장 이후 키워드 목록이 바뀌었을 수 있으니 핵심/PP 여부는 매번 다시 판정한다
+                # 저장 이후 키워드 목록이 바뀌었을 수 있으니 핵심이슈 라벨/핵심/PP 여부는 매번 다시 판정한다
+                Priority      = ($null -ne (Get-PriorityLabel $r.Title))
+                PriorityLabel = (Get-PriorityLabel $r.Title)
                 IsCore      = (Test-CoreTopicMatch $r.Title)
                 IsPP        = (Test-PPMatch $r.Title)
             })
@@ -603,7 +624,7 @@ function Build-RowsHtml($list, $emptyMsg) {
         $idx++
         $page = [Math]::Ceiling($idx / $PageSize)
         $timeStr = $it.DisplayTime
-        $badge = if ($it.Priority) { "<span class='badge'>🔥 핵심이슈</span>" } else { "" }
+        $badge = if ($it.Priority) { "<span class='badge'>🔥 $(HtmlEscape $it.PriorityLabel)</span>" } else { "" }
         $rowClass = if ($it.Priority) { "row priority" } else { "row" }
         [void]$sb.Append("<li class='$rowClass' data-page='$page'>")
         [void]$sb.Append("$badge<a class='headline' href='$(HtmlEscape $it.Link)' target='_blank' rel='noopener'>$(HtmlEscape $it.Title)</a>")
@@ -769,7 +790,7 @@ $html = @"
       </div>
     </div>
   </div>
-  <footer>3시간마다 자동 갱신(GitHub Actions 클라우드에서 실행 · PC와 무관하게 항상 최신 상태) · 최근 7일간 누적 · 최대 10페이지까지 보관<br>🔥 핵심이슈 = 대가산정안/채널평가/채널퇴출/프로그램사용료 관련 기사 · 새로고침 버튼은 마지막으로 저장된 최신본을 다시 불러옵니다.</footer>
+  <footer>3시간마다 자동 갱신(GitHub Actions 클라우드에서 실행 · PC와 무관하게 항상 최신 상태) · 최근 7일간 누적 · 최대 10페이지까지 보관<br>🔥 핵심이슈 배지 = 대가산정 · 채널평가 · 채널퇴출 · 사용료 · 실적 관련 기사 (배지에 구체적 이슈 표시) · 새로고침 버튼은 마지막으로 저장된 최신본을 다시 불러옵니다.</footer>
 </div>
 <script>
 function doRefresh() {
