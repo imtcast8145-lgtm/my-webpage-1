@@ -2,8 +2,8 @@ name: 유료방송 뉴스 자동 갱신
 
 on:
   schedule:
-    # UTC 기준. 한국시간(KST)은 UTC+9라서 */30 그대로도 30분 간격은 동일하게 유지됨
-    - cron: '*/30 * * * *'
+    # UTC 기준. 한국시간(KST)은 UTC+9라서 시간 단위 간격은 그대로 유지됨
+    - cron: '0 */3 * * *'
   workflow_dispatch: {}   # Actions 탭에서 수동 실행 버튼으로도 테스트 가능
   push:
     branches: [main]      # 코드를 고칠 때 바로 한 번 돌려서 확인하기 위함
