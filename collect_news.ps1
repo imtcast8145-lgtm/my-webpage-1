@@ -373,6 +373,10 @@ function Load-History {
         $raw = Get-Content -Raw -Encoding UTF8 $HistoryPath | ConvertFrom-Json
         if ($null -eq $raw) { return $result }
         foreach ($r in @($raw)) {
+            # 필터 조건(제외어 등)을 나중에 고쳤을 수 있으니, 저장된 기사도 매번 현재 기준으로
+            # 다시 검증해서 더 이상 조건에 안 맞으면 히스토리에서 자연스럽게 빠지도록 한다
+            if (-not (Test-TopicMatch $r.Title)) { continue }
+
             $pd = $null
             if ($r.PubDateIso) {
                 try {
