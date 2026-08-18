@@ -674,12 +674,13 @@ $html = @"
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tcast Media news clipping(IPTV/SO/PP)</title>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <style>
   :root { color-scheme: light dark; }
   * { box-sizing: border-box; }
   body {
     margin: 0; padding: 0;
-    font-family: -apple-system, "Segoe UI", "Malgun Gothic", "맑은 고딕", sans-serif;
+    font-family: "Pretendard", -apple-system, "Segoe UI", "Malgun Gothic", "맑은 고딕", sans-serif;
     background: #f4f5f7; color: #1a1a1a;
   }
   @media (prefers-color-scheme: dark) {
