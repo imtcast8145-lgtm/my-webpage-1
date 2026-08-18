@@ -43,7 +43,7 @@ $CoreIndustryKeywords = @(
 # '핵심 유료방송' 탭에는 안 들어간다(SO/IPTV 플랫폼사와는 다른 축이라 분리).
 $ExtendedTopicKeywords = @(
     '웨이브','티빙','왓챠','디즈니플러스','쿠팡플레이',
-    '망사용료','합산규제','인수합병','M&A',
+    '망사용료','합산규제',
     '외주제작','K-콘텐츠','K콘텐츠','방송광고',
     '홈쇼핑','T커머스',
     '유튜브','크리에이터',
@@ -64,6 +64,9 @@ $ExclusionKeywords = @(
 # 'KT','삼성','애플','SK텔레콤'은 사업 영역이 워낙 넓어(5G, 반도체, 스마트폰, 클라우드, 야구단 등)
 # 이름만으로 인정하면 무관한 뉴스가 쏟아진다. 그래서 미디어/방송/콘텐츠 맥락 단어가 같이 나올 때만 인정한다.
 $HighVolumeEntityKeywords = @('삼성','애플','SK텔레콤','SKT')
+# '인수합병'/'M&A'도 업계와 무관한 회사의 M&A 뉴스에 흔히 붙어 나오므로(예: 성호전자 M&A)
+# 방송/미디어 맥락과 같이 나올 때만 인정한다.
+$ContextGatedKeywords = @('인수합병','M&A')
 $MediaContextWords = @(
     '방송','채널','미디어','콘텐츠','OTT','IPTV','유료방송','케이블','넷플릭스',
     'TV','셋톱박스','스카이라이프','시청률','드라마','예능','스트리밍','엔터테인먼트'
@@ -147,6 +150,11 @@ function Test-TopicMatch($text) {
     if ($hasContext -and ($text -match '(?<![A-Za-z0-9])KT(?![A-Za-z0-9])')) { $expandedMatch = $true }
     if (-not $expandedMatch) {
         foreach ($kw in $HighVolumeEntityKeywords) {
+            if ($hasContext -and $text.Contains($kw)) { $expandedMatch = $true; break }
+        }
+    }
+    if (-not $expandedMatch) {
+        foreach ($kw in $ContextGatedKeywords) {
             if ($hasContext -and $text.Contains($kw)) { $expandedMatch = $true; break }
         }
     }
