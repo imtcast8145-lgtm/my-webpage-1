@@ -137,6 +137,14 @@ function Test-PPMatch($text) {
 
 function Test-TopicMatch($text) {
     if ([string]::IsNullOrWhiteSpace($text)) { return $false }
+
+    # 사용자 요청: 'CJ'(CJ그룹 전체 - 식품/뷰티/물류 등 무관 계열사 뉴스 포함)는 제외하고
+    # 'CJ ENM'(콘텐츠 계열사)만 인정한다. 'K-콘텐츠' 같은 느슨한 키워드에 걸려서
+    # CJ그룹 전체 뉴스(예: 이재현 회장 북미 매출 목표)가 새는 걸 막기 위해 최우선으로 검사한다.
+    if (($text -match '(?<![A-Za-z0-9])CJ(?![A-Za-z0-9])') -and (-not $text.Contains('CJ ENM'))) {
+        return $false
+    }
+
     foreach ($kw in $TopicKeywords) {
         if ($text.Contains($kw)) { return $true }
     }
