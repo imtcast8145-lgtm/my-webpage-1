@@ -349,13 +349,19 @@ $Items = New-Object System.Collections.Generic.List[object]
 # (한국은 서머타임이 없어 항상 UTC+9로 고정해도 안전함)
 $Now = (Get-Date).ToUniversalTime().AddHours(9)
 
-function Add-NewsItem($title, $link, $source, $pubDate, $displayTime) {
+function Add-NewsItem($title, $link, $source, $pubDate, $displayTime, $summary) {
     if ([string]::IsNullOrWhiteSpace($title) -or [string]::IsNullOrWhiteSpace($link)) { return }
     $title = $title.Trim()
     if ([string]::IsNullOrWhiteSpace($displayTime)) {
         $displayTime = if ($pubDate) { $pubDate.ToString("MM/dd HH:mm") } else { "시간 미상" }
     }
     $prLabel = Get-PriorityLabel $title
+    # 요약은 너무 길면 카드가 지저분해지니 한 줄 정도(90자)로 자르고 말줄임표를 붙인다
+    $cleanSummary = ""
+    if (-not [string]::IsNullOrWhiteSpace($summary)) {
+        $cleanSummary = ($summary -replace '\s+', ' ').Trim()
+        if ($cleanSummary.Length -gt 90) { $cleanSummary = $cleanSummary.Substring(0, 90).Trim() + "…" }
+    }
     $Items.Add([PSCustomObject]@{
         Title         = $title
         Link          = $link.Trim()
@@ -366,6 +372,8 @@ function Add-NewsItem($title, $link, $source, $pubDate, $displayTime) {
         PriorityLabel = $prLabel
         IsCore        = (Test-CoreTopicMatch $title)
         IsPP          = (Test-PPMatch $title)
+        Tag           = (Get-EntityKey $title)
+        Summary       = $cleanSummary
     })
 }
 
@@ -403,6 +411,8 @@ function Load-History {
                 PriorityLabel = (Get-PriorityLabel $r.Title)
                 IsCore      = (Test-CoreTopicMatch $r.Title)
                 IsPP        = (Test-PPMatch $r.Title)
+                Tag         = (Get-EntityKey $r.Title)
+                Summary     = $r.Summary
             })
         }
     } catch {
@@ -421,6 +431,7 @@ function Save-History($items) {
                 PubDateIso  = if ($_.PubDate) { $_.PubDate.ToString("o") } else { $null }
                 DisplayTime = $_.DisplayTime
                 Priority    = [bool]$_.Priority
+                Summary     = $_.Summary
             }
         })
         $toSave | ConvertTo-Json -Depth 3 | Set-Content -Path $HistoryPath -Encoding UTF8
@@ -449,7 +460,7 @@ foreach ($feed in $RssFeeds) {
             $link  = $it.link
             $pub   = Parse-RssDate $it.pubDate
             if (Test-TopicMatch "$title $desc") {
-                Add-NewsItem -title $title -link $link -source $feed.name -pubDate $pub
+                Add-NewsItem -title $title -link $link -source $feed.name -pubDate $pub -summary $desc
                 $count++
             }
         }
@@ -489,6 +500,10 @@ foreach ($q in $NaverQueries) {
         $timeRegex  = [regex]'(\d+\s*(분|시간|일|주|개월|달|년)\s*전|\d{4}\.\d{2}\.\d{2}\.)'
         # 검색결과에 "네이버뉴스"로 연결되는 별도 링크가 있으면(대부분의 언론사가 네이버에 기사를 제휴 전송) 그 링크를 우선 사용
         $navLinkRegex = [regex]'<a[^>]+href="(?<href>https?://[^"]+)"[^>]*data-heatmap-target="\.nav"'
+        # 검색결과에 같이 나오는 기사 본문 미리보기(스니펫)를 요약으로 사용
+        $summaryRegex = [regex]::new(
+            'data-heatmap-target="\.body"[^>]*>\s*<span[^>]*sds-comps-text-type-body1"[^>]*>(?<summary>.*?)</span>',
+            [System.Text.RegularExpressions.RegexOptions]::Singleline)
 
         $count = 0
         for ($i = 0; $i -lt $titleMatches.Count; $i++) {
@@ -503,6 +518,10 @@ foreach ($q in $NaverQueries) {
             $window   = $html.Substring($winStart, [Math]::Max(0, $winEnd - $winStart))
             $tMatch   = $timeRegex.Match($window)
             $navMatch = $navLinkRegex.Match($window)
+            $sumMatch = $summaryRegex.Match($window)
+            $summary  = if ($sumMatch.Success) {
+                [System.Net.WebUtility]::HtmlDecode(($sumMatch.Groups['summary'].Value -replace '<[^>]+>', ''))
+            } else { $null }
 
             # 출처(언론사명)는 항상 원본 언론사 도메인 기준으로 판단하되,
             # 실제로 클릭했을 때 열리는 링크는 네이버뉴스 링크가 있으면 그쪽을 사용
@@ -520,7 +539,7 @@ foreach ($q in $NaverQueries) {
             }
 
             if (Test-TopicMatch $title) {
-                Add-NewsItem -title $title -link $link -source $source -pubDate $pub -displayTime $disp
+                Add-NewsItem -title $title -link $link -source $source -pubDate $pub -displayTime $disp -summary $summary
                 $count++
             }
         }
@@ -659,9 +678,12 @@ function Build-RowsHtml($list, $emptyMsg) {
         $page = [Math]::Ceiling($idx / $PageSize)
         $timeStr = $it.DisplayTime
         $badge = if ($it.Priority) { "<span class='badge'>🔥 $(HtmlEscape $it.PriorityLabel)</span>" } else { "" }
+        $tag = if (-not [string]::IsNullOrWhiteSpace($it.Tag)) { "<span class='tag'>#$(HtmlEscape $it.Tag)</span>" } else { "" }
+        $summaryHtml = if (-not [string]::IsNullOrWhiteSpace($it.Summary)) { "<div class='summary'>$(HtmlEscape $it.Summary)</div>" } else { "" }
         $rowClass = if ($it.Priority) { "row priority" } else { "row" }
         [void]$sb.Append("<li class='$rowClass' data-page='$page'>")
-        [void]$sb.Append("$badge<a class='headline' href='$(HtmlEscape $it.Link)' target='_blank' rel='noopener'>$(HtmlEscape $it.Title)</a>")
+        [void]$sb.Append("$badge$tag<a class='headline' href='$(HtmlEscape $it.Link)' target='_blank' rel='noopener'>$(HtmlEscape $it.Title)</a>")
+        [void]$sb.Append($summaryHtml)
         [void]$sb.Append("<div class='meta'><span class='source'>$(HtmlEscape $it.Source)</span><span class='dot'>·</span><span class='time'>$timeStr</span></div>")
         [void]$sb.Append("</li>")
     }
@@ -696,6 +718,9 @@ $html = @"
     .card { background: #1f2229 !important; border-color: #2c303a !important; }
     .row { border-bottom-color: #2a2d35 !important; }
     .meta { color: #9aa0aa !important; }
+    .summary { color: #9aa0aa !important; }
+    .tag { background: #2a2f52 !important; color: #a5b4fc !important; }
+    .searchBox { background: #1f2229 !important; border-color: #3a3f47 !important; color: #e6e6e6 !important; }
     header { background: linear-gradient(135deg,#c2116b,#8e0e50) !important; }
   }
   header {
@@ -722,6 +747,15 @@ $html = @"
   .badge {
     display: inline-block; background: #ef4444; color: #fff; font-size: 11px;
     padding: 2px 7px; border-radius: 10px; margin-right: 6px; vertical-align: middle;
+  }
+  .tag {
+    display: inline-block; background: #e0e7ff; color: #4338ca; font-size: 11px; font-weight: 600;
+    padding: 2px 7px; border-radius: 10px; margin-right: 6px; vertical-align: middle;
+  }
+  .summary { margin-top: 5px; font-size: 12.5px; color: #6b7280; line-height: 1.5; }
+  .searchBox {
+    display: block; width: 100%; padding: 9px 12px; margin: 12px 12px 0; box-sizing: border-box;
+    border: 1px solid #d1d5db; border-radius: 8px; font-size: 13px; font-family: inherit;
   }
   .headline { text-decoration: none; color: inherit; font-size: 15px; font-weight: 600; line-height: 1.4; }
   .headline:hover { text-decoration: underline; color: #2563eb; }
@@ -791,6 +825,7 @@ $html = @"
 <div class="wrap" style="margin-top:0; padding-top:0;">
   <div class="tab-section active" id="allSection">
     <div class="card" style="margin-top:0;">
+      <input type="text" class="searchBox" placeholder="🔍 제목·요약·출처 검색" oninput="doSearch('all', this.value)">
       <ul id="allList">
         $allRowsHtml
       </ul>
@@ -803,6 +838,7 @@ $html = @"
   </div>
   <div class="tab-section" id="coreSection">
     <div class="card" style="margin-top:0;">
+      <input type="text" class="searchBox" placeholder="🔍 제목·요약·출처 검색" oninput="doSearch('core', this.value)">
       <ul id="coreList">
         $coreRowsHtml
       </ul>
@@ -815,6 +851,7 @@ $html = @"
   </div>
   <div class="tab-section" id="ppSection">
     <div class="card" style="margin-top:0;">
+      <input type="text" class="searchBox" placeholder="🔍 제목·요약·출처 검색" oninput="doSearch('pp', this.value)">
       <ul id="ppList">
         $ppRowsHtml
       </ul>
@@ -867,6 +904,22 @@ function gotoPage(scope, p) {
   if (prevBtn) { prevBtn.disabled = (p === 1); }
   if (nextBtn) { nextBtn.disabled = (p === maxPage); }
   if (pager) { pager.style.display = (maxPage > 1) ? 'flex' : 'none'; }
+}
+
+function doSearch(scope, query) {
+  query = query.trim().toLowerCase();
+  var rows = document.querySelectorAll('#' + scope + 'List li');
+  var pager = document.getElementById(scope + 'Pager');
+  if (query === '') {
+    // 검색어를 지우면 원래 페이지네이션 상태로 복원
+    gotoPage(scope, currentPage[scope] || 1);
+    return;
+  }
+  rows.forEach(function (r) {
+    var text = r.textContent.toLowerCase();
+    r.style.display = (text.indexOf(query) !== -1) ? '' : 'none';
+  });
+  if (pager) { pager.style.display = 'none'; }
 }
 
 gotoPage('core', 1);
