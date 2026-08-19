@@ -357,10 +357,12 @@ function Add-NewsItem($title, $link, $source, $pubDate, $displayTime, $summary) 
     }
     $prLabel = Get-PriorityLabel $title
     # 요약은 너무 길면 카드가 지저분해지니 한 줄 정도(90자)로 자르고 말줄임표를 붙인다
+    # 2줄 분량(카드 폭 기준 대략 140자)까지 보여준다. 네이버 스니펫은 대개 기사 첫 문장(리드)이라
+    # 한국 기사 특성상 이미 결론·핵심이 앞에 나오는 두괄식 구성인 경우가 많다.
     $cleanSummary = ""
     if (-not [string]::IsNullOrWhiteSpace($summary)) {
         $cleanSummary = ($summary -replace '\s+', ' ').Trim()
-        if ($cleanSummary.Length -gt 90) { $cleanSummary = $cleanSummary.Substring(0, 90).Trim() + "…" }
+        if ($cleanSummary.Length -gt 140) { $cleanSummary = $cleanSummary.Substring(0, 140).Trim() + "…" }
     }
     $Items.Add([PSCustomObject]@{
         Title         = $title
@@ -752,7 +754,10 @@ $html = @"
     display: inline-block; background: #e0e7ff; color: #4338ca; font-size: 11px; font-weight: 600;
     padding: 2px 7px; border-radius: 10px; margin-right: 6px; vertical-align: middle;
   }
-  .summary { margin-top: 5px; font-size: 12.5px; color: #6b7280; line-height: 1.5; }
+  .summary {
+    margin-top: 5px; font-size: 12.5px; color: #6b7280; line-height: 1.5;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  }
   .searchBox {
     display: block; width: 100%; padding: 9px 12px; margin: 12px 12px 0; box-sizing: border-box;
     border: 1px solid #d1d5db; border-radius: 8px; font-size: 13px; font-family: inherit;
