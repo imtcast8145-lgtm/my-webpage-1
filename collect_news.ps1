@@ -933,3 +933,4 @@ gotoPage('pp', 1);
 Set-Content -Path $ReportPath -Value $html -Encoding UTF8
 Write-Log "리포트 생성 완료: $ReportPath"
 # git add/commit/push는 이 스크립트가 아니라 .github/workflows/update-news.yml 워크플로우가 담당한다
+# 로컬 예약작업(작업 스케줄러) 제거로 인한 충돌 해결 확인용 트리거 2026-08-19 02:32 UTC
