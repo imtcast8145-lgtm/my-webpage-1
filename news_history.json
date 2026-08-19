@@ -3,7 +3,7 @@
     "Title": "SKB는 웃고 KT스카이라이프·LG헬로는 울고···유료방송3사 실적 '희비...",
     "Link": "https://www.sisajournal-e.com/news/articleView.html?idxno=423103",
     "Source": "sisajournal-e.com",
-    "PubDateIso": "2026-08-17T06:49:07.1311106Z",
+    "PubDateIso": "2026-08-17T10:20:14.8443121Z",
     "DisplayTime": "08/17 (2일 전)",
     "Priority": true
   },
@@ -11,7 +11,7 @@
     "Title": "KT스카이라이프, 2Q 영업익 111억…전년比 14.3%↓",
     "Link": "http://www.popcornnews.net/news/articleView.html?idxno=129862",
     "Source": "popcornnews.net",
-    "PubDateIso": "2026-08-14T06:49:07.1311106Z",
+    "PubDateIso": "2026-08-14T10:20:14.8443121Z",
     "DisplayTime": "08/14 (5일 전)",
     "Priority": true
   },
@@ -19,7 +19,7 @@
     "Title": "가입자 늘어도 매출은 제자리…유료방송 성장 한계",
     "Link": "http://www.newstomato.com/ReadNews.aspx?no=1310228&amp;inflow=N",
     "Source": "newstomato.com",
-    "PubDateIso": "2026-08-13T06:49:07.1311106Z",
+    "PubDateIso": "2026-08-13T10:20:14.8443121Z",
     "DisplayTime": "08/13 (6일 전)",
     "Priority": true
   },
@@ -27,15 +27,31 @@
     "Title": "케이블TV, 콘텐츠 사용료 80% 최소 보장…대가산정 기준 손질",
     "Link": "https://www.newsis.com/view/NISX20260813_0003748389",
     "Source": "뉴시스",
-    "PubDateIso": "2026-08-13T06:49:07.1311106Z",
+    "PubDateIso": "2026-08-13T10:20:14.8443121Z",
     "DisplayTime": "08/13 (6일 전)",
     "Priority": true
+  },
+  {
+    "Title": "LG유플러스·연세대, AI-RAN 전환 기술 검증…6G 대비 속도",
+    "Link": "https://www.sentv.co.kr/article/view/sentv202608190040",
+    "Source": "sentv.co.kr",
+    "PubDateIso": "2026-08-19T10:09:14.8443121Z",
+    "DisplayTime": "08/19 10:09",
+    "Priority": false
+  },
+  {
+    "Title": "'데인저러스 애니멀스', 오늘부터 IPTV·VOD 극장 동시 서비스",
+    "Link": "https://www.topstarnews.net/news/articleView.html?idxno=16167034",
+    "Source": "topstarnews.net",
+    "PubDateIso": "2026-08-19T06:20:14.8443121Z",
+    "DisplayTime": "08/19 06:20",
+    "Priority": false
   },
   {
     "Title": "과기정통부, ‘모두의 AI’ 사업에 6개 컨소시엄 출사표",
     "Link": "https://biz.chosun.com/it-science/ict/2026/08/18/4AJETE3NCFBKFL6EKBVLRFMLPQ/?utm_source=naver&amp;utm_medium=original&amp;utm_campaign=biz",
     "Source": "조선비즈",
-    "PubDateIso": "2026-08-18T20:49:07.1311106Z",
+    "PubDateIso": "2026-08-18T20:49:07.0000000",
     "DisplayTime": "08/18 20:49",
     "Priority": false
   },
@@ -43,8 +59,8 @@
     "Title": "유료방송 한파에 '선택과 집중'…KT ENA, 3개 채널 95억에 매각",
     "Link": "https://www.news1.kr/it-science/cc-newmedia/6262068",
     "Source": "뉴스1",
-    "PubDateIso": "2026-08-18T18:49:07.1311106Z",
-    "DisplayTime": "08/18 18:49",
+    "PubDateIso": "2026-08-18T19:20:14.8443121Z",
+    "DisplayTime": "08/18 19:20",
     "Priority": false
   },
   {
@@ -67,7 +83,7 @@
     "Title": "LG유플러스, 벤츠 SW 파트너 선정…신차에 라이브 서비스 탑재",
     "Link": "https://www.it-b.co.kr/news/articleView.html?idxno=89529",
     "Source": "it-b.co.kr",
-    "PubDateIso": "2026-08-18T17:49:07.1311106Z",
+    "PubDateIso": "2026-08-18T17:49:07.0000000",
     "DisplayTime": "08/18 17:49",
     "Priority": false
   },
@@ -120,14 +136,6 @@
     "Priority": false
   },
   {
-    "Title": "LG헬로비전 '눈에 띄는 그녀들9' 폭염도 문제없었다",
-    "Link": "https://dhnews.co.kr/news/view/1065598710972345",
-    "Source": "dhnews.co.kr",
-    "PubDateIso": "2026-08-13T14:40:03.0000000",
-    "DisplayTime": "08/13 14:40",
-    "Priority": false
-  },
-  {
     "Title": "LG헬로비전 '눈에 띄는 그녀들9'…류은혜 문화해설사 일상",
     "Link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=274749",
     "Source": "businesskorea.co.kr",
@@ -136,18 +144,18 @@
     "Priority": false
   },
   {
-    "Title": "케이블TV SO업계, PP 콘텐츠 사용료 산정기준 개정…\"전년도 사용료 80% ...",
-    "Link": "https://www.dailian.co.kr/news/view/1678302/?sc=Naver",
-    "Source": "데일리안",
-    "PubDateIso": "2026-08-13T06:49:07.1311106Z",
-    "DisplayTime": "08/13 (6일 전)",
+    "Title": "LG헬로비전 '눈에 띄는 그녀들9' 폭염도 문제없었다",
+    "Link": "https://dhnews.co.kr/news/view/1065598710972345",
+    "Source": "dhnews.co.kr",
+    "PubDateIso": "2026-08-13T14:40:03.0000000",
+    "DisplayTime": "08/13 14:40",
     "Priority": false
   },
   {
-    "Title": "케이블TV, PP 채널사용료 매년 전년도 80% 보장",
-    "Link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=692908",
-    "Source": "디지털투데이",
-    "PubDateIso": "2026-08-13T06:49:07.1311106Z",
+    "Title": "케이블TV, PP 사용료 '전년도 80%' 보장…콘텐츠 제작·편성 안정화",
+    "Link": "https://www.news1.kr/it-science/cc-newmedia/6258360",
+    "Source": "뉴스1",
+    "PubDateIso": "2026-08-13T10:20:14.8443121Z",
     "DisplayTime": "08/13 (6일 전)",
     "Priority": false
   },
@@ -155,7 +163,7 @@
     "Title": "케이블TV, PP 콘텐츠 사용료 '전년도 80%' 매년 보장",
     "Link": "https://view.asiae.co.kr/article/2026081317360063492",
     "Source": "view.asiae.co.kr",
-    "PubDateIso": "2026-08-13T06:49:07.1311106Z",
+    "PubDateIso": "2026-08-13T10:20:14.8443121Z",
     "DisplayTime": "08/13 (6일 전)",
     "Priority": false
   },
@@ -163,7 +171,15 @@
     "Title": "케이블TV, PP 콘텐츠 투자 확대 유도… 채널 사용료 80% 우선 배분",
     "Link": "https://biz.chosun.com/it-science/ict/2026/08/13/AKCMGAN5QVFY3OK6HA6Z7XCQVI/?utm_source=naver&amp;utm_medium=original&amp;utm_campaign=biz",
     "Source": "조선비즈",
-    "PubDateIso": "2026-08-13T06:49:07.1311106Z",
+    "PubDateIso": "2026-08-13T10:20:14.8443121Z",
+    "DisplayTime": "08/13 (6일 전)",
+    "Priority": false
+  },
+  {
+    "Title": "케이블TV, PP에 채널사용료 ‘80% 보장’…투자 확대 시 가점",
+    "Link": "https://www.ddaily.co.kr/page/view/2026081317435091653",
+    "Source": "디지털데일리",
+    "PubDateIso": "2026-08-13T10:20:14.8443121Z",
     "DisplayTime": "08/13 (6일 전)",
     "Priority": false
   },
@@ -171,7 +187,15 @@
     "Title": "케이블TV, 방송채널 사용료 전년도 지급액 80% 보장",
     "Link": "https://www.dt.co.kr/article/12078246?ref=naver",
     "Source": "dt.co.kr",
-    "PubDateIso": "2026-08-13T06:49:07.1311106Z",
+    "PubDateIso": "2026-08-13T10:20:14.8443121Z",
+    "DisplayTime": "08/13 (6일 전)",
+    "Priority": false
+  },
+  {
+    "Title": "케이블TV SO업계, PP 콘텐츠 사용료 산정기준 개정…\"전년도 사용료 80% ...",
+    "Link": "https://www.dailian.co.kr/news/view/1678302/?sc=Naver",
+    "Source": "데일리안",
+    "PubDateIso": "2026-08-13T10:20:14.8443121Z",
     "DisplayTime": "08/13 (6일 전)",
     "Priority": false
   },
@@ -179,7 +203,7 @@
     "Title": "[단독] LG헬로비전, 올해 연봉 2.9% 인상",
     "Link": "http://www.fnnews.com/news/202608121631172506",
     "Source": "파이낸셜뉴스",
-    "PubDateIso": "2026-08-12T06:49:07.1311106Z",
+    "PubDateIso": "2026-08-12T10:20:14.8443121Z",
     "DisplayTime": "08/12",
     "Priority": false
   },
@@ -187,31 +211,87 @@
     "Title": "딜라이브TV, K-지역콘텐츠 앞세워 아세안 시장 공략",
     "Link": "https://www.dailian.co.kr/news/view/1677828/?sc=Naver",
     "Source": "데일리안",
-    "PubDateIso": "2026-08-12T06:49:07.1311106Z",
+    "PubDateIso": "2026-08-12T10:20:14.8443121Z",
     "DisplayTime": "08/12",
     "Priority": false
   },
   {
-    "Title": "딜라이브TV, 아세안 콘텐츠 유통망 뚫었다",
-    "Link": "http://www.fnnews.com/news/202608121430520861",
-    "Source": "파이낸셜뉴스",
-    "PubDateIso": "2026-08-12T06:49:07.1311106Z",
-    "DisplayTime": "08/12",
+    "Title": "[모닝 리포트] SBS, OTT 콘텐츠 수익에 영업익 개선…광고 회복이 관건",
+    "Link": "https://www.newspim.com/news/view/20260819000133",
+    "Source": "newspim.com",
+    "PubDateIso": "2026-08-19T08:20:14.8443121Z",
+    "DisplayTime": "08/19 08:20",
+    "Priority": true
+  },
+  {
+    "Title": "허드슨에이아이, SBS '펜트하우스'·'모범택시' AI 더빙",
+    "Link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=693937",
+    "Source": "디지털투데이",
+    "PubDateIso": "2026-08-19T10:15:14.8443121Z",
+    "DisplayTime": "08/19 10:15",
     "Priority": false
   },
   {
-    "Title": "16년 만에 일냈다...넷플릭스서 역주행 중인 '대작 영화' 정체",
-    "Link": "https://www.wikitree.co.kr/articles/1153206",
-    "Source": "wikitree.co.kr",
-    "PubDateIso": "2026-08-19T06:00:07.1311106Z",
-    "DisplayTime": "08/19 06:00",
+    "Title": "KBS 새 일일극 ‘엄마가 미쳤어요’, 정민아·동하·김희정·강경헌 출연...",
+    "Link": "https://www.viva100.com/article/20260819500547",
+    "Source": "viva100.com",
+    "PubDateIso": "2026-08-19T10:15:14.8443121Z",
+    "DisplayTime": "08/19 10:15",
+    "Priority": false
+  },
+  {
+    "Title": "\"OTT, 2031년 863조원 규모 전망...연 평균 8%대 성장\"",
+    "Link": "https://zdnet.co.kr/view/?no=20260819094041",
+    "Source": "ZDNet Korea",
+    "PubDateIso": "2026-08-19T09:48:14.8443121Z",
+    "DisplayTime": "08/19 09:48",
+    "Priority": false
+  },
+  {
+    "Title": "혜리·황인엽 주연 '그대에게 드림', 올해 ENA 드라마 최저 시청률로 종...",
+    "Link": "https://www.edaily.co.kr/news/newspath.asp?newsid=03020886645548960",
+    "Source": "이데일리",
+    "PubDateIso": "2026-08-19T09:46:14.8443121Z",
+    "DisplayTime": "08/19 09:46",
+    "Priority": false
+  },
+  {
+    "Title": "\"불륜은 시작일 뿐\"... 3주 연속 1위 찍은 쿠팡플레이 '지금불륜', 김혜...",
+    "Link": "https://www.insight.co.kr/news/568822",
+    "Source": "insight.co.kr",
+    "PubDateIso": "2026-08-19T09:26:14.8443121Z",
+    "DisplayTime": "08/19 09:26",
+    "Priority": false
+  },
+  {
+    "Title": "‘그대에게 드림’ 황인엽·이혜리, 꽉 찬 해피엔딩…시청률 2.3% 종영",
+    "Link": "https://sports.khan.co.kr/article/202608190928013?pt=nv",
+    "Source": "sports.khan.co.kr",
+    "PubDateIso": "2026-08-19T09:25:14.8443121Z",
+    "DisplayTime": "08/19 09:25",
+    "Priority": false
+  },
+  {
+    "Title": "쿠팡플레이, 이강인 아틀레티코 라리가 개막전 생중계",
+    "Link": "https://www.topstarnews.net/news/articleView.html?idxno=16167091",
+    "Source": "topstarnews.net",
+    "PubDateIso": "2026-08-19T09:20:14.8443121Z",
+    "DisplayTime": "08/19 09:20",
     "Priority": false
   },
   {
     "Title": "남희석표 ‘전국 노래자랑’ 자리 잡았다…자체 최고 시청률 달성[SS연...",
     "Link": "https://www.sportsseoul.com/news/read/1629206?ref=naver",
     "Source": "sportsseoul.com",
-    "PubDateIso": "2026-08-19T06:00:07.1311106Z",
+    "PubDateIso": "2026-08-19T06:00:07.0000000",
+    "DisplayTime": "08/19 06:00",
+    "Priority": false
+  },
+  {
+    "Title": "16년 만에 일냈다...넷플릭스서 역주행 중인 '대작 영화' 정체",
+    "Link": "https://www.wikitree.co.kr/articles/1153206",
+    "Source": "wikitree.co.kr",
+    "PubDateIso": "2026-08-19T06:00:07.0000000",
     "DisplayTime": "08/19 06:00",
     "Priority": false
   },
@@ -219,7 +299,7 @@
     "Title": "'오싹한 연애', 자체 최고 시청률 7.3%→TV 화제성 순위 1위",
     "Link": "https://www.topstarnews.net/news/articleView.html?idxno=16166838",
     "Source": "topstarnews.net",
-    "PubDateIso": "2026-08-19T03:49:07.1311106Z",
+    "PubDateIso": "2026-08-19T03:49:07.0000000",
     "DisplayTime": "08/19 03:49",
     "Priority": false
   },
@@ -227,7 +307,7 @@
     "Title": "리센느, '전참시' 이어 '놀토'로 TV·OTT 비드라마 출연자 화제성 순위 ...",
     "Link": "https://www.topstarnews.net/news/articleView.html?idxno=16166761",
     "Source": "topstarnews.net",
-    "PubDateIso": "2026-08-19T01:49:07.1311106Z",
+    "PubDateIso": "2026-08-19T01:49:07.0000000",
     "DisplayTime": "08/19 01:49",
     "Priority": false
   },
@@ -235,8 +315,8 @@
     "Title": "‘그래 이혼하자’ 등장인물관계도, 몇부작, OTT는?",
     "Link": "https://www.bntnews.co.kr/article/view/bnt202608190002",
     "Source": "bntnews.co.kr",
-    "PubDateIso": "2026-08-19T00:49:07.1311106Z",
-    "DisplayTime": "08/19 00:49",
+    "PubDateIso": "2026-08-19T01:20:14.8443121Z",
+    "DisplayTime": "08/19 01:20",
     "Priority": false
   },
   {
@@ -275,7 +355,7 @@
     "Title": "이채민, 넷플릭스 등산 예능 앞두고 유쾌 근황",
     "Link": "https://www.topstarnews.net/news/articleView.html?idxno=16166382",
     "Source": "topstarnews.net",
-    "PubDateIso": "2026-08-18T20:49:07.1311106Z",
+    "PubDateIso": "2026-08-18T20:49:07.0000000",
     "DisplayTime": "08/18 20:49",
     "Priority": false
   },
@@ -283,16 +363,16 @@
     "Title": "방영 2주 만에…최고 시청률 4.7% 기록하며 동시간대 1위 차지한 '드라마...",
     "Link": "https://www.wikitree.co.kr/articles/1152985",
     "Source": "wikitree.co.kr",
-    "PubDateIso": "2026-08-18T19:49:07.1311106Z",
-    "DisplayTime": "08/18 19:49",
+    "PubDateIso": "2026-08-18T19:20:14.8443121Z",
+    "DisplayTime": "08/18 19:20",
     "Priority": false
   },
   {
     "Title": "영화 산업 살리려 OTT 공개 늦춘다?…홀드백 논의에 소비자 반발",
     "Link": "https://www.dt.co.kr/article/12078836?ref=naver",
     "Source": "dt.co.kr",
-    "PubDateIso": "2026-08-18T19:49:07.1311106Z",
-    "DisplayTime": "08/18 19:49",
+    "PubDateIso": "2026-08-18T19:20:14.8443121Z",
+    "DisplayTime": "08/18 19:20",
     "Priority": false
   },
   {
@@ -315,15 +395,15 @@
     "Title": "드라마부터 예능까지…OTT 업계, 하반기도 콘텐츠 전쟁",
     "Link": "https://www.goodkyung.com/news/articleView.html?idxno=290372",
     "Source": "goodkyung.com",
-    "PubDateIso": "2026-08-18T17:49:07.1311106Z",
-    "DisplayTime": "08/18 17:49",
+    "PubDateIso": "2026-08-18T18:20:14.8443121Z",
+    "DisplayTime": "08/18 18:20",
     "Priority": false
   },
   {
     "Title": "OTT 수익 포기하고 관객 기다리는 영화들, 왜?",
     "Link": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003259780&amp;CMPT_CD=P0010&amp;utm_source=naver&amp;utm_medium=newsearch&amp;utm_campaign=naver_news",
     "Source": "ohmynews.com",
-    "PubDateIso": "2026-08-18T17:49:07.1311106Z",
+    "PubDateIso": "2026-08-18T17:49:07.0000000",
     "DisplayTime": "08/18 17:49",
     "Priority": false
   },
@@ -331,7 +411,7 @@
     "Title": "기업가치 3300억 → 42억 '급감'한 왓챠, '이 기업'에 팔린다",
     "Link": "https://www.insight.co.kr/news/568731",
     "Source": "insight.co.kr",
-    "PubDateIso": "2026-08-18T16:49:07.1311106Z",
+    "PubDateIso": "2026-08-18T16:49:07.0000000",
     "DisplayTime": "08/18 16:49",
     "Priority": false
   },
@@ -339,16 +419,8 @@
     "Title": "왓챠, 키노라이츠 품에서 살아날까…\"관건은 콘텐츠\"",
     "Link": "https://www.ddaily.co.kr/page/view/2026081816191590869",
     "Source": "디지털데일리",
-    "PubDateIso": "2026-08-18T16:49:07.1311106Z",
+    "PubDateIso": "2026-08-18T16:49:07.0000000",
     "DisplayTime": "08/18 16:49",
-    "Priority": false
-  },
-  {
-    "Title": "SBS, 기안84와 연프·AI 결합한 실험 예능 내놓는다",
-    "Link": "https://www.newsis.com/view/NISX20260818_0003752947",
-    "Source": "뉴시스",
-    "PubDateIso": "2026-08-18T16:47:42.0000000",
-    "DisplayTime": "08/18 16:47",
     "Priority": false
   },
   {
@@ -360,11 +432,19 @@
     "Priority": false
   },
   {
-    "Title": "뻔한 연프는 가라…SBS, '시한부'와 'AI'로 새로운 사랑을 말하다 [ST이슈...",
-    "Link": "http://www.stoo.com/article.php?aid=108379347864",
-    "Source": "stoo.com",
-    "PubDateIso": "2026-08-18T16:43:42.0000000",
-    "DisplayTime": "08/18 16:43",
+    "Title": "SBS, 기안84와 연프·AI 결합한 실험 예능 내놓는다",
+    "Link": "https://www.newsis.com/view/NISX20260818_0003752947",
+    "Source": "뉴시스",
+    "PubDateIso": "2026-08-18T16:47:42.0000000",
+    "DisplayTime": "08/18 16:47",
+    "Priority": false
+  },
+  {
+    "Title": "시청률 7% 공약까지 세웠는데…결국 오늘 마지막이라는 '한국 드라마'",
+    "Link": "https://www.wikitree.co.kr/articles/1153163",
+    "Source": "wikitree.co.kr",
+    "PubDateIso": "2026-08-18T16:20:14.8443121Z",
+    "DisplayTime": "08/18 16:20",
     "Priority": false
   },
   {
@@ -373,14 +453,6 @@
     "Source": "fntoday.co.kr",
     "PubDateIso": "2026-08-18T16:12:42.0000000",
     "DisplayTime": "08/18 16:12",
-    "Priority": false
-  },
-  {
-    "Title": "시청률 7% 공약까지 세웠는데…결국 오늘 마지막이라는 '한국 드라마'",
-    "Link": "https://www.wikitree.co.kr/articles/1153163",
-    "Source": "wikitree.co.kr",
-    "PubDateIso": "2026-08-18T15:49:07.1311106Z",
-    "DisplayTime": "08/18 15:49",
     "Priority": false
   },
   {
@@ -432,6 +504,14 @@
     "Priority": false
   },
   {
+    "Title": "불꽃 파이터즈, 독립야구 최강팀 안산 웨이브스 격파…생중계 5연승",
+    "Link": "https://www.sportsseoul.com/news/read/1629219?ref=naver",
+    "Source": "sportsseoul.com",
+    "PubDateIso": "2026-08-18T15:20:14.8443121Z",
+    "DisplayTime": "08/18 15:20",
+    "Priority": false
+  },
+  {
     "Title": "벌써 시청률 10% 돌파…캐스팅 논란→원작 역주행으로 '어마무시' 상승...",
     "Link": "https://www.tvreport.co.kr/breaking/article/1069517/",
     "Source": "tvreport.co.kr",
@@ -453,14 +533,6 @@
     "Source": "slist.kr",
     "PubDateIso": "2026-08-18T15:11:50.0000000",
     "DisplayTime": "08/18 15:11",
-    "Priority": false
-  },
-  {
-    "Title": "기안84, 첫 SBS 나들이하며 하트 [포토엔HD]",
-    "Link": "https://www.newsen.com/news_view.php?uid=202608181510445510",
-    "Source": "newsen.com",
-    "PubDateIso": "2026-08-18T15:10:18.0000000",
-    "DisplayTime": "08/18 15:10",
     "Priority": false
   },
   {
@@ -493,14 +565,6 @@
     "Source": "tenasia.co.kr",
     "PubDateIso": "2026-08-18T15:00:18.0000000",
     "DisplayTime": "08/18 15:00",
-    "Priority": false
-  },
-  {
-    "Title": "불꽃 파이터즈, 독립야구 최강팀 안산 웨이브스 격파…생중계 5연승",
-    "Link": "https://www.sportsseoul.com/news/read/1629219?ref=naver",
-    "Source": "sportsseoul.com",
-    "PubDateIso": "2026-08-18T14:49:07.1311106Z",
-    "DisplayTime": "08/18 14:49",
     "Priority": false
   },
   {
@@ -539,7 +603,7 @@
     "Title": "OTT, 트로트 팬덤 잡는다…2040 넘어 중장년층으로 영토 확장",
     "Link": "http://www.metroseoul.co.kr/article/20260818500368",
     "Source": "metroseoul.co.kr",
-    "PubDateIso": "2026-08-18T11:49:07.1311106Z",
+    "PubDateIso": "2026-08-18T11:49:07.0000000",
     "DisplayTime": "08/18 11:49",
     "Priority": false
   },
@@ -616,17 +680,17 @@
     "Priority": false
   },
   {
-    "Title": "하윤경, JTBC '아파트' 종영 인사…시청자·주민 향한 진심의 감사",
-    "Link": "https://www.topstarnews.net/news/articleView.html?idxno=16165358",
-    "Source": "topstarnews.net",
+    "Title": "15.6% 시청률→주말 '전체 1위' 찍었다…새 인연 예고하며 기대 폭발 시...",
+    "Link": "https://mhnse.com/news/articleView.html?idxno=1492643",
+    "Source": "mhnse.com",
     "PubDateIso": "2026-08-17T17:17:17.0000000",
     "DisplayTime": "08/17 17:17",
     "Priority": false
   },
   {
-    "Title": "15.6% 시청률→주말 '전체 1위' 찍었다…새 인연 예고하며 기대 폭발 시...",
-    "Link": "https://mhnse.com/news/articleView.html?idxno=1492643",
-    "Source": "mhnse.com",
+    "Title": "하윤경, JTBC '아파트' 종영 인사…시청자·주민 향한 진심의 감사",
+    "Link": "https://www.topstarnews.net/news/articleView.html?idxno=16165358",
+    "Source": "topstarnews.net",
     "PubDateIso": "2026-08-17T17:17:17.0000000",
     "DisplayTime": "08/17 17:17",
     "Priority": false
@@ -696,6 +760,14 @@
     "Priority": false
   },
   {
+    "Title": "티빙, 출범 후 첫 분기 흑자…KBO '락인' 전략 트로트로 확장",
+    "Link": "https://www.newswhoplus.com/news/articleView.html?idxno=67160",
+    "Source": "newswhoplus.com",
+    "PubDateIso": "2026-08-17T10:20:14.8443121Z",
+    "DisplayTime": "08/17 (2일 전)",
+    "Priority": false
+  },
+  {
     "Title": "\"영상 보고 AI 쓰고\"...이통3사, 5G·LTE 통합 요금제에 OTT·AI 구독 장착",
     "Link": "https://zdnet.co.kr/view/?no=20260814222156",
     "Source": "ZDNet Korea",
@@ -717,14 +789,6 @@
     "Source": "starnewskorea.com",
     "PubDateIso": "2026-08-17T08:52:51.0000000",
     "DisplayTime": "08/17 08:52",
-    "Priority": false
-  },
-  {
-    "Title": "티빙, 출범 후 첫 분기 흑자…KBO '락인' 전략 트로트로 확장",
-    "Link": "https://www.newswhoplus.com/news/articleView.html?idxno=67160",
-    "Source": "newswhoplus.com",
-    "PubDateIso": "2026-08-17T06:49:07.1311106Z",
-    "DisplayTime": "08/17 (2일 전)",
     "Priority": false
   },
   {
@@ -840,6 +904,14 @@
     "Priority": false
   },
   {
+    "Title": "사랑·청춘·낭만 그리고…여름 감성 영화 '톱5' (보는 곳, OTT)",
+    "Link": "https://www.wikitree.co.kr/articles/1152286",
+    "Source": "wikitree.co.kr",
+    "PubDateIso": "2026-08-16T10:20:14.8443121Z",
+    "DisplayTime": "08/16 (3일 전)",
+    "Priority": false
+  },
+  {
     "Title": "양세종, 연인 박은빈 위한 특급 외조 ‘오싹한 연애’ 시청률 공효진 뒤...",
     "Link": "https://www.newsen.com/news_view.php?uid=202608160939311910",
     "Source": "newsen.com",
@@ -869,14 +941,6 @@
     "Source": "h21.hani.co.kr",
     "PubDateIso": "2026-08-16T06:52:51.0000000",
     "DisplayTime": "08/16 (2일 전)",
-    "Priority": false
-  },
-  {
-    "Title": "사랑·청춘·낭만 그리고…여름 감성 영화 '톱5' (보는 곳, OTT)",
-    "Link": "https://www.wikitree.co.kr/articles/1152286",
-    "Source": "wikitree.co.kr",
-    "PubDateIso": "2026-08-16T06:49:07.1311106Z",
-    "DisplayTime": "08/16 (3일 전)",
     "Priority": false
   },
   {
@@ -936,17 +1000,17 @@
     "Priority": false
   },
   {
-    "Title": "심형래의 '디 워', 19년만에 넷플릭스 타고 글로벌 역주행",
-    "Link": "http://www.fnnews.com/news/202608151131587840",
-    "Source": "파이낸셜뉴스",
+    "Title": "심혜림, '동궁' 소의 윤 씨 열연…넷플릭스 TOP 1 존재감",
+    "Link": "https://www.gukjenews.com/news/articleView.html?idxno=3665575",
+    "Source": "gukjenews.com",
     "PubDateIso": "2026-08-15T11:34:19.0000000",
     "DisplayTime": "08/15 11:34",
     "Priority": false
   },
   {
-    "Title": "심혜림, '동궁' 소의 윤 씨 열연…넷플릭스 TOP 1 존재감",
-    "Link": "https://www.gukjenews.com/news/articleView.html?idxno=3665575",
-    "Source": "gukjenews.com",
+    "Title": "심형래의 '디 워', 19년만에 넷플릭스 타고 글로벌 역주행",
+    "Link": "http://www.fnnews.com/news/202608151131587840",
+    "Source": "파이낸셜뉴스",
     "PubDateIso": "2026-08-15T11:34:19.0000000",
     "DisplayTime": "08/15 11:34",
     "Priority": false
@@ -992,11 +1056,19 @@
     "Priority": false
   },
   {
-    "Title": "KBS 광복절 특별다큐 '관순동순'…이세영, 독립운동가 남동순 된다",
-    "Link": "https://www.edaily.co.kr/news/newspath.asp?newsid=02253366645547648",
-    "Source": "이데일리",
-    "PubDateIso": "2026-08-15T11:02:19.0000000",
-    "DisplayTime": "08/15 11:02",
+    "Title": "[챗ICT]잘 나가던 드라마 내린 中 OTT.…'중드 마니아' 울린 사연",
+    "Link": "https://news.bizwatch.co.kr/article/mobile/2026/08/14/0035",
+    "Source": "news.bizwatch.co.kr",
+    "PubDateIso": "2026-08-15T10:20:14.8443121Z",
+    "DisplayTime": "08/15 (4일 전)",
+    "Priority": false
+  },
+  {
+    "Title": "[OTT가이드] 영화로 떠나는 국내 여행···조금 다른 도파민이 터진다?",
+    "Link": "https://www.seoulfn.com/news/articleView.html?idxno=635746",
+    "Source": "seoulfn.com",
+    "PubDateIso": "2026-08-15T10:20:14.8443121Z",
+    "DisplayTime": "08/15 (4일 전)",
     "Priority": false
   },
   {
@@ -1008,9 +1080,9 @@
     "Priority": false
   },
   {
-    "Title": "도파민 자극 제대로…'시청률 37%' 주역, 6년 만 복귀→라인업부터 '대박...",
-    "Link": "https://www.tvreport.co.kr/breaking/article/1068866/",
-    "Source": "tvreport.co.kr",
+    "Title": "천만영화 '파묘'부터 SF '경성크리처'까지...광복절 볼 만한 OTT 콘텐츠 ...",
+    "Link": "https://zdnet.co.kr/view/?no=20260814223137",
+    "Source": "ZDNet Korea",
     "PubDateIso": "2026-08-15T09:40:30.0000000",
     "DisplayTime": "08/15 09:40",
     "Priority": false
@@ -1024,9 +1096,9 @@
     "Priority": false
   },
   {
-    "Title": "천만영화 '파묘'부터 SF '경성크리처'까지...광복절 볼 만한 OTT 콘텐츠 ...",
-    "Link": "https://zdnet.co.kr/view/?no=20260814223137",
-    "Source": "ZDNet Korea",
+    "Title": "도파민 자극 제대로…'시청률 37%' 주역, 6년 만 복귀→라인업부터 '대박...",
+    "Link": "https://www.tvreport.co.kr/breaking/article/1068866/",
+    "Source": "tvreport.co.kr",
     "PubDateIso": "2026-08-15T09:40:30.0000000",
     "DisplayTime": "08/15 09:40",
     "Priority": false
@@ -1072,22 +1144,6 @@
     "Priority": false
   },
   {
-    "Title": "[OTT가이드] 영화로 떠나는 국내 여행···조금 다른 도파민이 터진다?",
-    "Link": "https://www.seoulfn.com/news/articleView.html?idxno=635746",
-    "Source": "seoulfn.com",
-    "PubDateIso": "2026-08-15T06:49:07.1311106Z",
-    "DisplayTime": "08/15 (4일 전)",
-    "Priority": false
-  },
-  {
-    "Title": "[챗ICT]잘 나가던 드라마 내린 中 OTT.…'중드 마니아' 울린 사연",
-    "Link": "https://news.bizwatch.co.kr/article/mobile/2026/08/14/0035",
-    "Source": "news.bizwatch.co.kr",
-    "PubDateIso": "2026-08-15T06:49:07.1311106Z",
-    "DisplayTime": "08/15 (4일 전)",
-    "Priority": false
-  },
-  {
     "Title": "퀄컴 스냅드래곤 C, 300달러 노트북서 넷플릭스 재생 전력효율 106% 앞선...",
     "Link": "https://www.wikitree.co.kr/articles/1152579",
     "Source": "wikitree.co.kr",
@@ -1128,17 +1184,17 @@
     "Priority": false
   },
   {
-    "Title": "안보현 \"배우 꿈꾸며 일용직 알바 多...'재벌X형사2' 희망 시청률? 15% 찍...",
-    "Link": "https://www.tvreport.co.kr/breaking/article/1068813/",
-    "Source": "tvreport.co.kr",
+    "Title": "韓 제작사 글로벌 연프 '락락', 웨이브 국내 독점 공개",
+    "Link": "https://www.mt.co.kr/industry/2026/08/14/2026081417341868874",
+    "Source": "머니투데이",
     "PubDateIso": "2026-08-14T19:29:50.0000000",
     "DisplayTime": "08/14 19:29",
     "Priority": false
   },
   {
-    "Title": "韓 제작사 글로벌 연프 '락락', 웨이브 국내 독점 공개",
-    "Link": "https://www.mt.co.kr/industry/2026/08/14/2026081417341868874",
-    "Source": "머니투데이",
+    "Title": "안보현 \"배우 꿈꾸며 일용직 알바 多...'재벌X형사2' 희망 시청률? 15% 찍...",
+    "Link": "https://www.tvreport.co.kr/breaking/article/1068813/",
+    "Source": "tvreport.co.kr",
     "PubDateIso": "2026-08-14T19:29:50.0000000",
     "DisplayTime": "08/14 19:29",
     "Priority": false
@@ -1216,17 +1272,17 @@
     "Priority": false
   },
   {
-    "Title": "'언니네 산지직송3', 새 멤버 효과-3주째 시청률 1위",
-    "Link": "https://www.mediafine.co.kr/news/articleView.html?idxno=86674",
-    "Source": "mediafine.co.kr",
+    "Title": "Swedish luxury seen through OTT characters… Volvo Car Korea supports 'X...",
+    "Link": "https://us.aving.net/news/articleView.html?idxno=54249",
+    "Source": "us.aving.net",
     "PubDateIso": "2026-08-14T12:50:10.0000000",
     "DisplayTime": "08/14 12:50",
     "Priority": false
   },
   {
-    "Title": "Swedish luxury seen through OTT characters… Volvo Car Korea supports 'X...",
-    "Link": "https://us.aving.net/news/articleView.html?idxno=54249",
-    "Source": "us.aving.net",
+    "Title": "'언니네 산지직송3', 새 멤버 효과-3주째 시청률 1위",
+    "Link": "https://www.mediafine.co.kr/news/articleView.html?idxno=86674",
+    "Source": "mediafine.co.kr",
     "PubDateIso": "2026-08-14T12:50:10.0000000",
     "DisplayTime": "08/14 12:50",
     "Priority": false
@@ -1272,6 +1328,22 @@
     "Priority": false
   },
   {
+    "Title": "\"해방될 줄 몰랐으니까\"…광복절 독립 운동 영화 '톱5' (보는 곳, OTT)",
+    "Link": "https://www.wikitree.co.kr/articles/1152247",
+    "Source": "wikitree.co.kr",
+    "PubDateIso": "2026-08-14T10:20:14.8443121Z",
+    "DisplayTime": "08/14 (5일 전)",
+    "Priority": false
+  },
+  {
+    "Title": "토종 OTT 왓챠, 키노라이츠 품으로…인수 가격은 42억 5천만 원",
+    "Link": "https://ent.sbs.co.kr/news/article.do?article_id=E10010320611&amp;plink=ORI&amp;cooper=NAVER",
+    "Source": "ent.sbs.co.kr",
+    "PubDateIso": "2026-08-14T10:20:14.8443121Z",
+    "DisplayTime": "08/14 (5일 전)",
+    "Priority": false
+  },
+  {
     "Title": "'이숙캠' 2.5%…라면부부, 사실은 '쌍방 폭행' [시청률]",
     "Link": "http://www.tvdaily.co.kr/read.php3?aid=17866691261797814019",
     "Source": "tvdaily.co.kr",
@@ -1296,17 +1368,17 @@
     "Priority": false
   },
   {
-    "Title": "‘오징어 게임’ 다음은 ‘베베핀’…넷플릭스 누적 시청수 2억을 넘었...",
-    "Link": "https://www.venturesquare.net/1106108/",
-    "Source": "venturesquare.net",
+    "Title": "티빙-웨이브 연내 합병 불투명…‘시계제로’ 된 국내 OTT",
+    "Link": "https://biz.heraldcorp.com/article/10841143?ref=naver",
+    "Source": "biz.heraldcorp.com",
     "PubDateIso": "2026-08-14T09:50:10.0000000",
     "DisplayTime": "08/14 09:50",
     "Priority": false
   },
   {
-    "Title": "티빙-웨이브 연내 합병 불투명…‘시계제로’ 된 국내 OTT",
-    "Link": "https://biz.heraldcorp.com/article/10841143?ref=naver",
-    "Source": "biz.heraldcorp.com",
+    "Title": "‘오징어 게임’ 다음은 ‘베베핀’…넷플릭스 누적 시청수 2억을 넘었...",
+    "Link": "https://www.venturesquare.net/1106108/",
+    "Source": "venturesquare.net",
     "PubDateIso": "2026-08-14T09:50:10.0000000",
     "DisplayTime": "08/14 09:50",
     "Priority": false
@@ -1336,17 +1408,17 @@
     "Priority": false
   },
   {
-    "Title": "류준열, 이름도 얼굴도 송두리째 빼앗겼다…넷플릭스 스릴러 ‘들쥐’...",
-    "Link": "https://www.heraldmuse.com/article/10841058?ref=naver",
-    "Source": "heraldmuse.com",
+    "Title": "6.7% 치솟은 시청률…단 2회 남겨두고 정면 승부 앞둔 韓 드라마 ('아파...",
+    "Link": "https://mhnse.com/news/articleView.html?idxno=1489051",
+    "Source": "mhnse.com",
     "PubDateIso": "2026-08-14T09:09:30.0000000",
     "DisplayTime": "08/14 09:09",
     "Priority": false
   },
   {
-    "Title": "6.7% 치솟은 시청률…단 2회 남겨두고 정면 승부 앞둔 韓 드라마 ('아파...",
-    "Link": "https://mhnse.com/news/articleView.html?idxno=1489051",
-    "Source": "mhnse.com",
+    "Title": "류준열, 이름도 얼굴도 송두리째 빼앗겼다…넷플릭스 스릴러 ‘들쥐’...",
+    "Link": "https://www.heraldmuse.com/article/10841058?ref=naver",
+    "Source": "heraldmuse.com",
     "PubDateIso": "2026-08-14T09:09:30.0000000",
     "DisplayTime": "08/14 09:09",
     "Priority": false
@@ -1373,22 +1445,6 @@
     "Source": "wowtv.co.kr",
     "PubDateIso": "2026-08-14T07:16:42.0000000",
     "DisplayTime": "08/14 07:16",
-    "Priority": false
-  },
-  {
-    "Title": "\"해방될 줄 몰랐으니까\"…광복절 독립 운동 영화 '톱5' (보는 곳, OTT)",
-    "Link": "https://www.wikitree.co.kr/articles/1152247",
-    "Source": "wikitree.co.kr",
-    "PubDateIso": "2026-08-14T06:49:07.1311106Z",
-    "DisplayTime": "08/14 (5일 전)",
-    "Priority": false
-  },
-  {
-    "Title": "토종 OTT 왓챠, 키노라이츠 품으로…인수 가격은 42억 5천만 원",
-    "Link": "https://ent.sbs.co.kr/news/article.do?article_id=E10010320611&amp;plink=ORI&amp;cooper=NAVER",
-    "Source": "ent.sbs.co.kr",
-    "PubDateIso": "2026-08-14T06:49:07.1311106Z",
-    "DisplayTime": "08/14 (5일 전)",
     "Priority": false
   },
   {
@@ -1475,7 +1531,7 @@
     "Title": "이동진의 올해 유일한 '5점 영화'…OTT엔 없고 '여기' 있다[테크로그]",
     "Link": "https://www.mt.co.kr/tech/2026/08/14/2026081215215667010",
     "Source": "머니투데이",
-    "PubDateIso": "2026-08-13T06:49:07.1311106Z",
+    "PubDateIso": "2026-08-13T10:20:14.8443121Z",
     "DisplayTime": "08/13 (6일 전)",
     "Priority": false
   },
@@ -1483,7 +1539,7 @@
     "Title": "[단독] 왓챠, 콘텐츠 기업 키노라이츠가 인수해 키운다 [시그널]",
     "Link": "https://www.sedaily.com/article/20078898?ref=naver",
     "Source": "sedaily.com",
-    "PubDateIso": "2026-08-12T06:49:07.1311106Z",
+    "PubDateIso": "2026-08-12T10:20:14.8443121Z",
     "DisplayTime": "08/12",
     "Priority": false
   },
@@ -1491,7 +1547,7 @@
     "Title": "애플, 출판사와 콘텐츠 사용료 협상…AI 시리 강화",
     "Link": "https://www.tokenpost.kr/news/breaking/389659",
     "Source": "tokenpost.kr",
-    "PubDateIso": "2026-08-12T06:49:07.1311106Z",
+    "PubDateIso": "2026-08-12T10:20:14.8443121Z",
     "DisplayTime": "08/12",
     "Priority": false
   },
@@ -1499,41 +1555,9 @@
     "Title": "\"적자일 땐 합치자더니\"···티빙 첫 흑자, 웨이브 합병의 '새 변수'로",
     "Link": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2459134",
     "Source": "enewstoday.co.kr",
-    "PubDateIso": "2026-08-12T06:49:07.1311106Z",
+    "PubDateIso": "2026-08-12T10:20:14.8443121Z",
     "DisplayTime": "08/12",
     "Priority": false
-  },
-  {
-    "Title": "CJ 이재현 회장, 28년 북미 매출 12조원 목표...'식품ㆍ콘텐츠ㆍ뷰티 시...",
-    "Link": "https://www.moneystorm.kr/news/articleView.html?idxno=5782",
-    "Source": "moneystorm.kr",
-    "PubDateIso": "2026-08-18T15:31:50.0000000",
-    "DisplayTime": "08/18 15:31",
-    "Priority": true
-  },
-  {
-    "Title": "CJ \"식품·콘텐츠·뷰티 시너지로 2028년 북미 매출 12조 목표\" 제시",
-    "Link": "https://www.webeconomy.co.kr/news/articleView.html?idxno=2268404",
-    "Source": "webeconomy.co.kr",
-    "PubDateIso": "2026-08-17T16:49:00.0000000",
-    "DisplayTime": "08/17 16:49",
-    "Priority": true
-  },
-  {
-    "Title": "북미 매출 10배 키운 CJ…이번엔 ‘12조원’ 베팅, K콘텐츠로 美 지갑 연...",
-    "Link": "https://www.megaeconomy.co.kr/news/newsview.php?ncode=1065579113933044",
-    "Source": "megaeconomy.co.kr",
-    "PubDateIso": "2026-08-17T12:07:00.0000000",
-    "DisplayTime": "08/17 12:07",
-    "Priority": true
-  },
-  {
-    "Title": "CJ, 2028년 북미 매출 12조원 목표로 K-콘텐츠·푸드·뷰티 생태계 가속...",
-    "Link": "http://www.worktoday.co.kr/news/articleView.html?idxno=88030",
-    "Source": "worktoday.co.kr",
-    "PubDateIso": "2026-08-17T06:49:07.1311106Z",
-    "DisplayTime": "08/17 (2일 전)",
-    "Priority": true
   },
   {
     "Title": "‘고마진·비용효율’ 승부 통했다…롯데홈쇼핑, 반년만에 작년 영업익...",
@@ -1552,18 +1576,50 @@
     "Priority": true
   },
   {
-    "Title": "배우 원지안, 흰엔터테인먼트 재계약 체결",
-    "Link": "https://sports.khan.co.kr/article/202608190508003?pt=nv",
-    "Source": "sports.khan.co.kr",
-    "PubDateIso": "2026-08-19T05:49:07.1311106Z",
-    "DisplayTime": "08/19 05:49",
+    "Title": "홈쇼핑 新동력 된 '모발케어'…GS샵 \"가파른 성장세\"",
+    "Link": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5052577",
+    "Source": "신아일보",
+    "PubDateIso": "2026-08-19T10:05:14.8443121Z",
+    "DisplayTime": "08/19 10:05",
+    "Priority": false
+  },
+  {
+    "Title": "결혼정보회사 듀오, 롯데홈쇼핑 라이브 방송…결혼정보서비스 선택지 확...",
+    "Link": "https://www.lecturernews.com/news/articleView.html?idxno=208901",
+    "Source": "lecturernews.com",
+    "PubDateIso": "2026-08-19T10:05:14.8443121Z",
+    "DisplayTime": "08/19 10:05",
+    "Priority": false
+  },
+  {
+    "Title": "중학생 인강 엠베스트, 2학기 내신 전 과목 강좌·시험 대비 콘텐츠 운...",
+    "Link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202608180788&amp;t=NN",
+    "Source": "wowtv.co.kr",
+    "PubDateIso": "2026-08-19T09:58:14.8443121Z",
+    "DisplayTime": "08/19 09:58",
+    "Priority": false
+  },
+  {
+    "Title": "' 연애 콘텐츠' 듀오, 유튜브 구독자 17만 명 돌파",
+    "Link": "https://www.kdpress.co.kr/news/articleView.html?idxno=207880",
+    "Source": "kdpress.co.kr",
+    "PubDateIso": "2026-08-19T09:20:14.8443121Z",
+    "DisplayTime": "08/19 09:20",
     "Priority": false
   },
   {
     "Title": "‘글로벌 숏폼 퀸’ 조연지, 이끌엔터테인먼트 전속계약",
     "Link": "https://sports.khan.co.kr/article/202608190513003?pt=nv",
     "Source": "sports.khan.co.kr",
-    "PubDateIso": "2026-08-19T05:49:07.1311106Z",
+    "PubDateIso": "2026-08-19T05:49:07.0000000",
+    "DisplayTime": "08/19 05:49",
+    "Priority": false
+  },
+  {
+    "Title": "배우 원지안, 흰엔터테인먼트 재계약 체결",
+    "Link": "https://sports.khan.co.kr/article/202608190508003?pt=nv",
+    "Source": "sports.khan.co.kr",
+    "PubDateIso": "2026-08-19T05:49:07.0000000",
     "DisplayTime": "08/19 05:49",
     "Priority": false
   },
@@ -1603,7 +1659,7 @@
     "Title": "현대홈쇼핑, 'TOPS 프로그램' 2단계 진행...뷰티 소상공인 성장 지원",
     "Link": "https://www.betanews.net/article/view/beta202608180072",
     "Source": "betanews.net",
-    "PubDateIso": "2026-08-18T20:49:07.1311106Z",
+    "PubDateIso": "2026-08-18T20:49:07.0000000",
     "DisplayTime": "08/18 20:49",
     "Priority": false
   },
@@ -1611,7 +1667,7 @@
     "Title": "지구 반대편 남미까지 K콘텐츠 물결‥'마블'도 K웹툰 따라한다",
     "Link": "https://imnews.imbc.com/replay/2026/nwdesk/article/6845589_37004.html",
     "Source": "imnews.imbc.com",
-    "PubDateIso": "2026-08-18T20:49:07.1311106Z",
+    "PubDateIso": "2026-08-18T20:49:07.0000000",
     "DisplayTime": "08/18 20:49",
     "Priority": false
   },
@@ -1627,7 +1683,7 @@
     "Title": "[유통] 신세계 역대 최대 베이비페어 / 현대홈쇼핑 뷰티 소상공인 60곳 ...",
     "Link": "https://www.webeconomy.co.kr/news/articleView.html?idxno=2269893",
     "Source": "webeconomy.co.kr",
-    "PubDateIso": "2026-08-18T19:49:07.1311106Z",
+    "PubDateIso": "2026-08-18T19:49:07.0000000",
     "DisplayTime": "08/18 19:49",
     "Priority": false
   },
@@ -1659,7 +1715,7 @@
     "Title": "AI 콘텐츠 모두 ‘슬롭’ 아니다…저품질 대량생산이 경계선",
     "Link": "https://www.vegannews.co.kr/news/article.html?no=384791",
     "Source": "vegannews.co.kr",
-    "PubDateIso": "2026-08-18T18:49:07.1311106Z",
+    "PubDateIso": "2026-08-18T18:49:07.0000000",
     "DisplayTime": "08/18 18:49",
     "Priority": false
   },
@@ -1707,7 +1763,7 @@
     "Title": "[IT큐레이션] 딸깍의 경제학 \"AI 콘텐츠를 어찌할꼬?\"",
     "Link": "https://www.econovill.com/news/articleView.html?idxno=748289",
     "Source": "econovill.com",
-    "PubDateIso": "2026-08-18T17:49:07.1311106Z",
+    "PubDateIso": "2026-08-18T17:49:07.0000000",
     "DisplayTime": "08/18 17:49",
     "Priority": false
   },
@@ -1720,17 +1776,17 @@
     "Priority": false
   },
   {
-    "Title": "벤츠 S클래스에 LGU+ 실시간 TV…차량용 미디어 사업 확대",
-    "Link": "http://www.joseilbo.com/news/news_read.php?uid=573993&amp;class=17&amp;grp=",
-    "Source": "joseilbo.com",
+    "Title": "LGU+, 메르세데스-벤츠 코리아와 신형 차량에 멀티미디어 서비스 탑재·...",
+    "Link": "http://www.wsobi.com/news/articleView.html?idxno=316631",
+    "Source": "wsobi.com",
     "PubDateIso": "2026-08-18T17:02:35.0000000",
     "DisplayTime": "08/18 17:02",
     "Priority": false
   },
   {
-    "Title": "LGU+, 메르세데스-벤츠 코리아와 신형 차량에 멀티미디어 서비스 탑재·...",
-    "Link": "http://www.wsobi.com/news/articleView.html?idxno=316631",
-    "Source": "wsobi.com",
+    "Title": "벤츠 S클래스에 LGU+ 실시간 TV…차량용 미디어 사업 확대",
+    "Link": "http://www.joseilbo.com/news/news_read.php?uid=573993&amp;class=17&amp;grp=",
+    "Source": "joseilbo.com",
     "PubDateIso": "2026-08-18T17:02:35.0000000",
     "DisplayTime": "08/18 17:02",
     "Priority": false
@@ -1992,14 +2048,6 @@
     "Priority": false
   },
   {
-    "Title": "연애·결혼 콘텐츠 통했나?…듀오 유튜브 구독자 17만 명 돌파",
-    "Link": "https://www.ikunkang.com/news/articleView.html?idxno=51362",
-    "Source": "ikunkang.com",
-    "PubDateIso": "2026-08-18T11:09:22.0000000",
-    "DisplayTime": "08/18 11:09",
-    "Priority": false
-  },
-  {
     "Title": "경북 AI·메타버스 영상제 97개국 3403편 출품…경북도, 콘텐츠 산업 육...",
     "Link": "https://www.nocutnews.co.kr/news/6563978?utm_source=naver&amp;utm_medium=article&amp;utm_campaign=20260818102717",
     "Source": "nocutnews.co.kr",
@@ -2008,10 +2056,18 @@
     "Priority": false
   },
   {
+    "Title": "연애·결혼 콘텐츠 통했나?…듀오 유튜브 구독자 17만 명 돌파",
+    "Link": "https://www.ikunkang.com/news/articleView.html?idxno=51362",
+    "Source": "ikunkang.com",
+    "PubDateIso": "2026-08-18T11:09:22.0000000",
+    "DisplayTime": "08/18 11:09",
+    "Priority": false
+  },
+  {
     "Title": "삼성전자-TCL, LCD TV 점유율 0.1%포인트 '박빙'",
     "Link": "https://www.etnews.com/20260818000403",
     "Source": "전자신문",
-    "PubDateIso": "2026-08-18T07:29:15.0000000+00:00",
+    "PubDateIso": "2026-08-18T07:29:15.0000000",
     "DisplayTime": "08/18 07:29",
     "Priority": false
   },
@@ -2037,14 +2093,6 @@
     "Source": "chosun.com",
     "PubDateIso": "2026-08-18T05:57:42.0000000",
     "DisplayTime": "08/18 05:57",
-    "Priority": false
-  },
-  {
-    "Title": "[대학·기업 손잡고 국가 혁신, OIRC] 〈5·끝〉 연세대(미래) OIRC, 청력 '디지털 헬스케어' 기술사업화로 세계 겨냥",
-    "Link": "https://www.etnews.com/20260818000031",
-    "Source": "전자신문",
-    "PubDateIso": "2026-08-18T05:00:00.0000000+00:00",
-    "DisplayTime": "08/18 05:00",
     "Priority": false
   },
   {
@@ -2088,14 +2136,6 @@
     "Priority": false
   },
   {
-    "Title": "‘문화 콘텐츠, 30년 공들였더니’ CJ그룹, 북미 ‘K콘텐츠 파워 시너지...",
-    "Link": "https://sports.khan.co.kr/article/202608171807013?pt=nv",
-    "Source": "sports.khan.co.kr",
-    "PubDateIso": "2026-08-17T18:17:17.0000000",
-    "DisplayTime": "08/17 18:17",
-    "Priority": false
-  },
-  {
     "Title": "[콘텐츠큐레이션]설산 등반부터 축구, 야구까지… 몸으로 부딪치는 3선",
     "Link": "https://www.bloter.net/news/articleView.html?idxno=671099",
     "Source": "bloter.net",
@@ -2117,14 +2157,6 @@
     "Source": "news.mtn.co.kr",
     "PubDateIso": "2026-08-17T17:17:41.0000000",
     "DisplayTime": "08/17 17:17",
-    "Priority": false
-  },
-  {
-    "Title": "이재현 CJ 회장 “콘텐츠·푸드·뷰티로 세계인의 일상 채우자”",
-    "Link": "http://www.segyebiz.com/newsView/20260817512996?OutUrl=naver",
-    "Source": "segyebiz.com",
-    "PubDateIso": "2026-08-17T16:12:00.0000000",
-    "DisplayTime": "08/17 16:12",
     "Priority": false
   },
   {
@@ -2224,17 +2256,17 @@
     "Priority": false
   },
   {
-    "Title": "중앙대, 인공지능 콘텐츠 창작자 교육생 60명 모집",
-    "Link": "https://www.naeil.com/news/read/598951?ref=naver",
-    "Source": "naeil.com",
+    "Title": "[알쏭달쏭 외래어] 프로그램, 프로그람",
+    "Link": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3072128",
+    "Source": "newsclaim.co.kr",
     "PubDateIso": "2026-08-16T18:39:45.0000000",
     "DisplayTime": "08/16 18:39",
     "Priority": false
   },
   {
-    "Title": "[알쏭달쏭 외래어] 프로그램, 프로그람",
-    "Link": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3072128",
-    "Source": "newsclaim.co.kr",
+    "Title": "중앙대, 인공지능 콘텐츠 창작자 교육생 60명 모집",
+    "Link": "https://www.naeil.com/news/read/598951?ref=naver",
+    "Source": "naeil.com",
     "PubDateIso": "2026-08-16T18:39:45.0000000",
     "DisplayTime": "08/16 18:39",
     "Priority": false
@@ -2248,17 +2280,17 @@
     "Priority": false
   },
   {
-    "Title": "[부고] 이중엽(울림엔터테인먼트 대표)씨 부친상",
-    "Link": "https://www.ziksir.com/news/articleView.html?idxno=143331",
-    "Source": "ziksir.com",
+    "Title": "일도 구직도 않는 청년… 주말 6시간 미디어·게임",
+    "Link": "https://www.seoul.co.kr/news/society/2026/08/16/20260816500053?wlog_tag3=naver",
+    "Source": "seoul.co.kr",
     "PubDateIso": "2026-08-16T15:20:36.0000000",
     "DisplayTime": "08/16 15:20",
     "Priority": false
   },
   {
-    "Title": "일도 구직도 않는 청년… 주말 6시간 미디어·게임",
-    "Link": "https://www.seoul.co.kr/news/society/2026/08/16/20260816500053?wlog_tag3=naver",
-    "Source": "seoul.co.kr",
+    "Title": "[부고] 이중엽(울림엔터테인먼트 대표)씨 부친상",
+    "Link": "https://www.ziksir.com/news/articleView.html?idxno=143331",
+    "Source": "ziksir.com",
     "PubDateIso": "2026-08-16T15:20:36.0000000",
     "DisplayTime": "08/16 15:20",
     "Priority": false
@@ -2288,6 +2320,14 @@
     "Priority": false
   },
   {
+    "Title": "극장 보호냐 콘텐츠 유통이냐…홀드백 결론 앞 업계 입장차 [엔터그알]",
+    "Link": "https://news.mtn.co.kr/news-detail/2026081415291112360",
+    "Source": "news.mtn.co.kr",
+    "PubDateIso": "2026-08-16T10:20:14.8443121Z",
+    "DisplayTime": "08/16 (3일 전)",
+    "Priority": false
+  },
+  {
     "Title": "디즈니, '재혼 황후'·'21세기 대군 부인' 등 K-콘텐츠 주목",
     "Link": "https://www.ytn.co.kr/_ln/0104_202608160734414226",
     "Source": "ytn.co.kr",
@@ -2301,14 +2341,6 @@
     "Source": "segye.com",
     "PubDateIso": "2026-08-16T07:20:36.0000000",
     "DisplayTime": "08/16 07:20",
-    "Priority": false
-  },
-  {
-    "Title": "극장 보호냐 콘텐츠 유통이냐…홀드백 결론 앞 업계 입장차 [엔터그알]",
-    "Link": "https://news.mtn.co.kr/news-detail/2026081415291112360",
-    "Source": "news.mtn.co.kr",
-    "PubDateIso": "2026-08-16T06:49:07.1311106Z",
-    "DisplayTime": "08/16 (3일 전)",
     "Priority": false
   },
   {
@@ -2512,25 +2544,17 @@
     "Priority": false
   },
   {
+    "Title": "린클, 15일 롯데홈쇼핑 ‘최유라쇼’서 음식물처리기 ‘프라임S’ 선보...",
+    "Link": "https://isplus.com/article/view/isp202608130049",
+    "Source": "isplus.com",
+    "PubDateIso": "2026-08-14T10:00:03.0000000",
+    "DisplayTime": "08/14 10:00",
+    "Priority": false
+  },
+  {
     "Title": "존알 'X1 MAX' 로봇청소기, 롯데홈쇼핑 런칭",
     "Link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=274761",
     "Source": "businesskorea.co.kr",
-    "PubDateIso": "2026-08-14T10:00:03.0000000",
-    "DisplayTime": "08/14 10:00",
-    "Priority": false
-  },
-  {
-    "Title": "JONR(존알) 'X1 MAX', 17일 롯데홈쇼핑 방송…앱 할인·18개월 무이자 할...",
-    "Link": "http://www.sisunnews.co.kr/news/articleView.html?idxno=244271",
-    "Source": "sisunnews.co.kr",
-    "PubDateIso": "2026-08-14T10:00:03.0000000",
-    "DisplayTime": "08/14 10:00",
-    "Priority": false
-  },
-  {
-    "Title": "린클 '프라임S', 15일 롯데홈쇼핑 최유라쇼서 특가 판매",
-    "Link": "https://www.bizwork.co.kr/news/articleView.html?idxno=418209",
-    "Source": "bizwork.co.kr",
     "PubDateIso": "2026-08-14T10:00:03.0000000",
     "DisplayTime": "08/14 10:00",
     "Priority": false
@@ -2544,9 +2568,17 @@
     "Priority": false
   },
   {
-    "Title": "린클, 15일 롯데홈쇼핑 ‘최유라쇼’서 음식물처리기 ‘프라임S’ 선보...",
-    "Link": "https://isplus.com/article/view/isp202608130049",
-    "Source": "isplus.com",
+    "Title": "린클 '프라임S', 15일 롯데홈쇼핑 최유라쇼서 특가 판매",
+    "Link": "https://www.bizwork.co.kr/news/articleView.html?idxno=418209",
+    "Source": "bizwork.co.kr",
+    "PubDateIso": "2026-08-14T10:00:03.0000000",
+    "DisplayTime": "08/14 10:00",
+    "Priority": false
+  },
+  {
+    "Title": "JONR(존알) 'X1 MAX', 17일 롯데홈쇼핑 방송…앱 할인·18개월 무이자 할...",
+    "Link": "http://www.sisunnews.co.kr/news/articleView.html?idxno=244271",
+    "Source": "sisunnews.co.kr",
     "PubDateIso": "2026-08-14T10:00:03.0000000",
     "DisplayTime": "08/14 10:00",
     "Priority": false
@@ -2728,14 +2760,6 @@
     "Priority": false
   },
   {
-    "Title": "[홈쇼핑업계 2Q 성적표] 롯데 수익성 급반등·CJ 외형 선두…4사 모두 '...",
-    "Link": "http://www.newslock.co.kr/news/articleView.html?idxno=134320",
-    "Source": "newslock.co.kr",
-    "PubDateIso": "2026-08-13T13:50:10.0000000",
-    "DisplayTime": "08/13 (1일 전)",
-    "Priority": false
-  },
-  {
     "Title": "이오콘텐츠그룹, 호러스릴러 명가 입지 굳힌다…‘지하도’ 공개",
     "Link": "http://www.osen.co.kr/article/G1112856327",
     "Source": "osen.co.kr",
@@ -2744,19 +2768,27 @@
     "Priority": false
   },
   {
-    "Title": "건국대 ‘2026 국제하계단기프로그램II’ 성황",
-    "Link": "https://dhnews.co.kr/news/view/1065604993288535",
-    "Source": "dhnews.co.kr",
-    "PubDateIso": "2026-08-13T09:27:28.0000000",
-    "DisplayTime": "08/13 09:27",
+    "Title": "[AP 미디어동향 8월 2주] 연합뉴스, 기자들의 신뢰도 2년 연속 1위",
+    "Link": "https://www.apnews.kr/news/articleView.html?idxno=3050528",
+    "Source": "apnews.kr",
+    "PubDateIso": "2026-08-13T10:20:14.8443121Z",
+    "DisplayTime": "08/13 (6일 전)",
     "Priority": false
   },
   {
     "Title": "\"덜 팔아도 더 남긴다\"…홈쇼핑업계, 2분기 체질 개선 효과 본격화",
     "Link": "http://www.ftoday.co.kr/news/articleView.html?idxno=363653",
     "Source": "ftoday.co.kr",
-    "PubDateIso": "2026-08-13T06:49:07.1311106Z",
+    "PubDateIso": "2026-08-13T10:20:14.8443121Z",
     "DisplayTime": "08/13 (6일 전)",
+    "Priority": false
+  },
+  {
+    "Title": "건국대 ‘2026 국제하계단기프로그램II’ 성황",
+    "Link": "https://dhnews.co.kr/news/view/1065604993288535",
+    "Source": "dhnews.co.kr",
+    "PubDateIso": "2026-08-13T09:27:28.0000000",
+    "DisplayTime": "08/13 09:27",
     "Priority": false
   },
   {
@@ -2787,7 +2819,7 @@
     "Title": "홈쇼핑, 중기·소상공인 판로지원 확대",
     "Link": "http://www.4th.kr/news/articleView.html?idxno=2116205",
     "Source": "4th.kr",
-    "PubDateIso": "2026-08-12T06:49:07.1311106Z",
+    "PubDateIso": "2026-08-12T10:20:14.8443121Z",
     "DisplayTime": "08/12",
     "Priority": false
   },
@@ -2795,7 +2827,7 @@
     "Title": "TV홈쇼핑 시장은 쪼그라드는데…홈쇼핑업계, 불황 속 수익성 반전 배경...",
     "Link": "https://www.ajunews.com/view/20260812134332867",
     "Source": "ajunews.com",
-    "PubDateIso": "2026-08-12T06:49:07.1311106Z",
+    "PubDateIso": "2026-08-12T10:20:14.8443121Z",
     "DisplayTime": "08/12",
     "Priority": false
   }
