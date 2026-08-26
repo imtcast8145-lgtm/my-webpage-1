@@ -37,7 +37,18 @@ $CoreIndustryKeywords = @(
     '유료방송가입자','디지털전환','실시간채널',
     # 사용자 요청으로 승격: IPTV 3사 중 SK브로드밴드·LG유플러스는 이름 자체가 구체적이라
     # SO와 동급으로 "핵심 유료방송"에 포함. KT는 사업 영역이 넓어 별도 조건부 처리(아래 Test-CoreTopicMatch 참고)
-    'SK브로드밴드','LG유플러스'
+    'SK브로드밴드','LG유플러스',
+    # 사용자 요청으로 추가: 업계 협회·법령 관련 고유명사. 협회명은 구체적 고유명사라
+    # 오탐 위험이 거의 없어 무조건 인정. '방송미디어통신위원회'는 '방송통신위원회'와는
+    # 다른 문자열이라 별도로 넣어야 매칭됨.
+    '한국방송채널진흥협회','한국방송채널사용사업협회','한국케이블TV방송협회',
+    '한국IPTV방송협회','방송미디어통신위원회','방송법 개정',
+    # 사용자 요청으로 추가: 채널/PP 분쟁 관련 이슈
+    '방송분쟁조정','채널종료',
+    # 사용자 요청으로 추가: SO/IPTV 재허가·재승인 관련. 기사에서 띄어쓰기가 붙거나(정식 법령명)
+    # 안 붙거나(약칭) 둘 다 쓰여서 두 형태 다 넣어야 놓치지 않음
+    '재승인','인터넷멀티미디어방송','인터넷 멀티미디어 방송',
+    '인터넷멀티미디어방송법','인터넷 멀티미디어 방송사업법'
 )
 # 이후 대화에서 넓힌 범위(OTT/제작유통 등 콘텐츠·채널사 쪽). 'PP 소식' 탭 대상이며
 # '핵심 유료방송' 탭에는 안 들어간다(SO/IPTV 플랫폼사와는 다른 축이라 분리).
@@ -69,7 +80,9 @@ $HighVolumeEntityKeywords = @('삼성','애플','SK텔레콤','SKT')
 # '인수합병'/'M&A'도 업계와 무관한 회사의 M&A 뉴스에 흔히 붙어 나오므로(예: 성호전자 M&A)
 # 방송/미디어 맥락과 같이 나올 때만 인정한다.
 # '유튜브'/'크리에이터'도 마찬가지 - 무관한 회사가 "유튜브 마케팅" 언급하는 경우가 많음(예: 비엘팜텍)
-$ContextGatedKeywords = @('인수합병','M&A','유튜브','크리에이터')
+# '가처분'도 마찬가지 - 부동산/노동/일반 상거래 분쟁에도 흔히 쓰이는 법률 용어라
+# 방송/채널 맥락과 같이 나올 때만 "방송 송출 관련 가처분 소송" 등으로 인정
+$ContextGatedKeywords = @('인수합병','M&A','유튜브','크리에이터','가처분')
 $MediaContextWords = @(
     '방송','채널','미디어','콘텐츠','OTT','IPTV','유료방송','케이블','넷플릭스',
     'TV','셋톱박스','스카이라이프','시청률','드라마','예능','스트리밍','엔터테인먼트'
@@ -108,7 +121,11 @@ $PPKeywords = @(
     # 신규 콘텐츠·프로그램 제작 소식
     '편성표','제작발표회','신작 드라마','신작 예능','오리지널 콘텐츠','시즌2 제작','첫방송','편성 확정',
     # 사용자 요청으로 추가: OTT 시장 뉴스, 콘텐츠 관련 시청률/이슈도 PP 탭으로
-    '웨이브','티빙','왓챠','디즈니플러스','쿠팡플레이','OTT','시청률','넷플릭스'
+    '웨이브','티빙','왓챠','디즈니플러스','쿠팡플레이','OTT','시청률','넷플릭스',
+    # 사용자 요청으로 추가: PP(채널사용사업자)를 대표하는 협회들
+    '한국방송채널진흥협회','한국방송채널사용사업협회','한국케이블TV방송협회',
+    # 사용자 요청으로 추가: PP 채널 분쟁/종료 이슈
+    '방송분쟁조정','채널종료'
 )
 
 # "처음에 얘기했던 유료방송업계" 판정 - 핵심 키워드 목록에만 근거(확장 범위는 포함하지 않음)
@@ -487,7 +504,14 @@ $NaverQueries = @(
     'KT', 'SK브로드밴드', 'LG유플러스 방송', 'MBC', 'KBS', 'SBS', 'JTBC',
     # PP(방송채널사용사업자) 탭 전용 검색어
     'PP협의회', 'MPP 채널', '콘텐츠 사용료 협상', '중복편성', 'tvN', 'CJ ENM 채널',
-    '드라마 제작발표', '예능 신작', '오리지널 콘텐츠 제작', '편성 확정'
+    '드라마 제작발표', '예능 신작', '오리지널 콘텐츠 제작', '편성 확정',
+    # 사용자 요청으로 추가: 업계 협회·법령 개정 전용 검색어
+    '한국방송채널진흥협회', '한국방송채널사용사업협회', '한국케이블TV방송협회',
+    '한국IPTV방송협회', '방송미디어통신위원회', '방송법 개정',
+    # 사용자 요청으로 추가: 채널 분쟁/종료, 방송 송출 관련 소송 전용 검색어
+    '방송분쟁조정', 'PP 채널종료', '방송 송출 가처분',
+    # 사용자 요청으로 추가: SO/IPTV 재허가·재승인, 인터넷멀티미디어방송사업법 전용 검색어
+    'SO 재허가', 'IPTV 재승인', '인터넷멀티미디어방송사업법'
 )
 
 foreach ($q in $NaverQueries) {
@@ -639,8 +663,14 @@ $MaxStoredHistoryCore = 200
 $MaxStoredHistoryPP   = 200
 $MaxStoredHistoryRest = 300
 
+# 사용자 요청으로 추가: "🆕 최신 뉴스"(all) 탭은 이름 그대로 "최신"이어야 하는데 7일 전
+# 기사까지 섞여 있어 체감상 오래돼 보인다는 피드백이 있어, 이 탭만 별도로 4일 컷오프를 둔다.
+# 핵심/PP 탭은 물량이 적은 편이라 7일 누적을 유지(정보 놓치지 않는 게 더 중요).
+$LatestTabRetentionHours = 24 * 4
+$latestCutoff = $Now.AddHours(-$LatestTabRetentionHours)
+
 # PowerShell은 결과가 1건뿐이면 배열이 아닌 단일 객체를 반환해 .Count가 비어버리므로 @()로 강제 배열화
-$final = @($capped | Select-Object -First $MaxDisplayItems)
+$final = @($capped | Where-Object { $_.PubDate -and $_.PubDate -ge $latestCutoff } | Select-Object -First $MaxDisplayItems)
 # 핵심/PP 탭은 서로 겹칠 수 있다(예: '채널퇴출' 기사는 핵심 유료방송이자 PP 뉴스이기도 함) - 화면 표시는 겹쳐도 자연스러움
 $coreFinal = @($capped | Where-Object { $_.IsCore } | Select-Object -First $MaxDisplayItems)
 $ppFinal   = @($capped | Where-Object { $_.IsPP } | Select-Object -First $MaxDisplayItems)
@@ -694,7 +724,7 @@ function Build-RowsHtml($list, $emptyMsg) {
 
 $coreRowsHtml = Build-RowsHtml $coreFinal "최근 7일 내 핵심 유료방송(IPTV/SO) 뉴스가 없습니다."
 $ppRowsHtml   = Build-RowsHtml $ppFinal "최근 7일 내 PP(방송채널사용사업자) 관련 뉴스가 없습니다."
-$allRowsHtml  = Build-RowsHtml $final "최근 7일 내 수집된 관련 뉴스가 없습니다."
+$allRowsHtml  = Build-RowsHtml $final "최근 4일 내 수집된 관련 뉴스가 없습니다."
 
 $KoCulture = [System.Globalization.CultureInfo]::GetCultureInfo("ko-KR")
 $updatedStr = $Now.ToString("yyyy-MM-dd (ddd) HH:mm", $KoCulture)
@@ -820,7 +850,7 @@ $html = @"
     </div>
     <button class="refresh-btn" id="refreshBtn" onclick="doRefresh()" aria-label="새로고침" title="새로고침"><span class="icon">🔄</span></button>
   </div>
-  <div class="updated">마지막 업데이트: $updatedStr · 핵심 $($coreFinal.Count)건 · PP $($ppFinal.Count)건 · 전체 $($final.Count)건 · 최근 7일 누적</div>
+  <div class="updated">마지막 업데이트: $updatedStr · 핵심 $($coreFinal.Count)건(최근 7일) · PP $($ppFinal.Count)건(최근 7일) · 전체 $($final.Count)건(최근 4일)</div>
 </header>
 <div class="tabs">
   <button class="tab-btn active" id="tabBtnAll" onclick="showTab('all')">🆕 최신 뉴스</button>
@@ -867,7 +897,7 @@ $html = @"
       </div>
     </div>
   </div>
-  <footer>3시간마다 자동 갱신(GitHub Actions 클라우드에서 실행 · PC와 무관하게 항상 최신 상태) · 최근 7일간 누적 · 최대 10페이지까지 보관<br>🔥 핵심이슈 배지 = 대가산정 · 채널평가 · 채널퇴출 · 사용료 · 실적 관련 기사 (배지에 구체적 이슈 표시) · 새로고침 버튼은 마지막으로 저장된 최신본을 다시 불러옵니다.</footer>
+  <footer>3시간마다 자동 갱신(GitHub Actions 클라우드에서 실행 · PC와 무관하게 항상 최신 상태) · 최신 뉴스는 최근 4일, 핵심 유료방송/PP 소식은 최근 7일간 누적 · 최대 10페이지까지 보관<br>🔥 핵심이슈 배지 = 대가산정 · 채널평가 · 채널퇴출 · 사용료 · 실적 관련 기사 (배지에 구체적 이슈 표시) · 새로고침 버튼은 마지막으로 저장된 최신본을 다시 불러옵니다.</footer>
 </div>
 <script>
 function doRefresh() {
