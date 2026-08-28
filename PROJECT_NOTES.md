@@ -14,7 +14,7 @@
 ## 전체 구조 (중요: 로컬 PC와 완전히 무관함)
 
 ```
-GitHub Actions (cron, 3시간마다)
+GitHub Actions (cron, 6시간마다 — KST 00시/06시/12시/18시. 2026-08-28에 3시간→6시간으로 변경)
   → collect_news.ps1 실행 (pwsh, ubuntu-latest 러너)
   → index.html + news_history.json + collect_log.txt 생성
   → GITHUB_TOKEN으로 자동 git commit + push
